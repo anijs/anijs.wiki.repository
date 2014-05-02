@@ -1,4 +1,4 @@
-Handling Animations
+Handling animations.
 ==========================
 
 Las animaciones pueden ser manejadas a partir de declaraciones directamente en los elementos HTML de la página. O [mediante Javascript](link a Manejando animaciones con javascript).
