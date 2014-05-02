@@ -1,20 +1,22 @@
-Handling animations.
-==========================
+Handling Animations Using JavaScript
+=====================================
 
-Las animaciones pueden ser manejadas a partir de declaraciones directamente en los elementos HTML de la página. O [mediante Javascript](link a Manejando animaciones con javascript).
+You can create animation directamente en JavaScript mediante la funcion **createAnimation**.
 
-Una declaracion esta compuesta por 1 o muchas sentencias separadas por (;) y cada setencia a su vez por 1 o muchas definiciones.
+```javascript
+
+	//When click in footer anim header with bounceIn animation.
+    AniJS.createAnimation([{
+        when: 'click',
+        where: 'footer',
+        what: 'header',
+        how: 'bounceIn',
+        before: function(e, animationContext){
+			if( someVariable ){
+				//Run the animation
+				animationContext.run()
+			}
+    	}
+    }]);
 
 ```
-	Declaration -> Setence 1; ... ; Sentence n
-	Sentence -> Definition, ... , Definition n
-	Definition-> When | Where | What | How | before | after | helper  
-```
-
-Multiple Sentences example.
-```xml
-    <header data-anijs="when: click, how: wobble; when: scroll, where: window, how: swing">
-    <!-- ... -->
-    </header>
-```
-

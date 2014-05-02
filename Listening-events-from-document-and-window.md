@@ -1,20 +1,22 @@
-Handling animations.
-==========================
+Listening events from document and window
+=========================================
 
-Las animaciones pueden ser manejadas a partir de declaraciones directamente en los elementos HTML de la página. O [mediante Javascript](link a Manejando animaciones con javascript).
+If you can execute a animation when any **document** event was triggered, you just put the document in a where definition.
 
-Una declaracion esta compuesta por 1 o muchas sentencias separadas por (;) y cada setencia a su vez por 1 o muchas definiciones.
-
-```
-	Declaration -> Setence 1; ... ; Sentence n
-	Sentence -> Definition, ... , Definition n
-	Definition-> When | Where | What | How | before | after | helper  
-```
-
-Multiple Sentences example.
+Ejemplo:
 ```xml
-    <header data-anijs="when: click, how: wobble; when: scroll, where: window, how: swing">
+	<!-- When  DOMContentLoaded animate header with bounceIn animation-->
+    <header data-anijs="when: DOMContentLoaded, where: document, how: bounceIn">
     <!-- ... -->
     </header>
 ```
 
+If you can execute a animation when any **window** event was triggered, you just put the document in a where definition.
+
+Ejemplo:
+```xml
+	<!-- When  DOMContentLoaded animate header with bounceIn animation-->
+    <header data-anijs="when: scroll, where: window, how: bounceIn">
+    <!-- ... -->
+    </header>
+```

@@ -1,20 +1,31 @@
-Handling animations.
-==========================
+Writing before and after functions
+==================================
 
-Las animaciones pueden ser manejadas a partir de declaraciones directamente en los elementos HTML de la página. O [mediante Javascript](link a Manejando animaciones con javascript).
+Despues de implementar las funciones after y before, estas deben ser registradas en un helper. Por defecto AniJS tiene un empty helper cuyo nombre es default. Se puede acceder al mismo llamando a la funcion **getHelper** sin ningun parametro.
 
-Una declaracion esta compuesta por 1 o muchas sentencias separadas por (;) y cada setencia a su vez por 1 o muchas definiciones.
+```javascript
+	//Obtaining the default helper
+	var animationHelper = AniJS.getHelper();
 
-```
-	Declaration -> Setence 1; ... ; Sentence n
-	Sentence -> Definition, ... , Definition n
-	Definition-> When | Where | What | How | before | after | helper  
-```
-
-Multiple Sentences example.
-```xml
-    <header data-anijs="when: click, how: wobble; when: scroll, where: window, how: swing">
-    <!-- ... -->
-    </header>
+	//Defining afterAnimationFunction
+	animationHelper.afterAnimationFunctionName = function(e, animationContext){
+		console.log('Running afterAnimationFunction');
+		console.log('Event triggered');
+		console.log(e);
+	}
 ```
 
+En el caso de la funcion before, usted tiene el poder de ejecutar o no, la animacion, mediante el objeto animationContext.
+
+```javascript
+	//Obtaining the default helper
+	var animationHelper = AniJS.getHelper();
+
+	//Defining afterAnimationFunction
+	animationHelper.beforeAnimationFunctionName = function(e, animationContext){
+		if( someVariable ){
+			//Run the animation
+			animationContext.run()
+		}
+	}
+```

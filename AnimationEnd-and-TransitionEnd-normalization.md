@@ -1,20 +1,23 @@
-Handling animations.
-==========================
+AnimationEnd and TransitionEnd normalization
+============================================
 
-Las animaciones pueden ser manejadas a partir de declaraciones directamente en los elementos HTML de la página. O [mediante Javascript](link a Manejando animaciones con javascript).
+Los eventos AnimationEnd and TransitionEnd are differentes en dependencia del browser.Por ejemplo:
 
-Una declaracion esta compuesta por 1 o muchas sentencias separadas por (;) y cada setencia a su vez por 1 o muchas definiciones.
+| Agent   | AnimationEnd Event | TransitionEnd Event |  
+| ----    | -----------------  | ------------------- |  
+| W3C     | animationend       | animationend        |  
+| Mozilla | mozAnimationEnd    | mozAnimationEnd     |  
+| Webkit  | webkitAnimationEnd | webkitAnimationEnd  |  
+| Opera   | oanimationend      | oanimationend		 |  
 
-```
-	Declaration -> Setence 1; ... ; Sentence n
-	Sentence -> Definition, ... , Definition n
-	Definition-> When | Where | What | How | before | after | helper  
-```
+In AniJS animation event trigger definition use only **animationend**.
 
-Multiple Sentences example.
+Ejemplo:
 ```xml
-    <header data-anijs="when: click, how: wobble; when: scroll, where: window, how: swing">
+    <header data-anijs="when: animationend, where: footer, how: bounceIn">
     <!-- ... -->
     </header>
+    <footer data-anijs="when: click, how: hinge">
+     <!-- ... -->
+    </footer>
 ```
-

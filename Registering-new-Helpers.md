@@ -1,20 +1,19 @@
-Handling animations.
+Registering new Helpers
 ==========================
 
-Las animaciones pueden ser manejadas a partir de declaraciones directamente en los elementos HTML de la página. O [mediante Javascript](link a Manejando animaciones con javascript).
+En aplicaciones complejas puede que sea necesario registrar varios helpers para tener un mayor encapsulamiento.
 
-Una declaracion esta compuesta por 1 o muchas sentencias separadas por (;) y cada setencia a su vez por 1 o muchas definiciones.
-
-```
-	Declaration -> Setence 1; ... ; Sentence n
-	Sentence -> Definition, ... , Definition n
-	Definition-> When | Where | What | How | before | after | helper  
-```
-
-Multiple Sentences example.
-```xml
-    <header data-anijs="when: click, how: wobble; when: scroll, where: window, how: swing">
-    <!-- ... -->
-    </header>
+```javascript
+	var validationAnimationHelper = {
+		beforeFormValidation : function(e, contextAnimation){
+			if( App.validate(App.Forms) ){
+				contextAnimation.run();
+			}
+		}
+	}
+	AniJS.registerHelper('validationAnimationHelper', validationAnimationHelper);
 ```
 
+Your custom helper always se ejecutara cada vez que se ponga.
+
+<button data-anijs="when: click, what: 'success-alert', how: bounceIn, before: beforeFormValidation, helper: validationAnimationHelper"<button/>
