@@ -25,3 +25,4 @@ AniJS is a declarative handling library for CSS animations. The main objective i
 - [[Purge Events]]
 - [[Handling Animations Using JavaScript]]
 - [[Animation Context Instance | Animation Context Object]]
+- [[Running AniJS repeatedly | Running-AniJS-repeatedly]]
