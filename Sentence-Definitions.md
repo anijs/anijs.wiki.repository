@@ -14,12 +14,12 @@ Algunos ejemplos de eventos son:
 - DOMContentLoaded
 
 ##### On
-Elementos que pueden lanzar el evento que disparará la animación definido en el [when](#when). Si no se especifica se tomará el propio elemento que contiene la declaracion. Se define mediante un selector CSS.
+Elementos que pueden lanzar el evento que disparará la animación definido en el [if](#if). Si no se especifica se tomará el propio elemento que contiene la declaracion. Se define mediante un selector CSS.
 
 Ejemplo especificando el elemento que dispara el evento:
 ```xml
-	<!-- When click in footer animate header. -->
-    <header data-anijs="when: click, where: footer, how: swing">
+	<!-- If click in footer animate header. -->
+    <header data-anijs="if: click, on: footer, do: swing">
     <!-- ... -->
     </header>
     <footer>
@@ -29,8 +29,8 @@ Ejemplo especificando el elemento que dispara el evento:
 
 Ejemplo sin especificar el elemento que dispara el evento:
 ```xml
-	<!-- When click in header animate header. -->
-    <header data-anijs="when: click, how: swing">
+	<!-- If click in header animate header. -->
+    <header data-anijs="if: click, do: swing">
     <!-- ... -->
     </header>
     <footer>
@@ -39,12 +39,12 @@ Ejemplo sin especificar el elemento que dispara el evento:
 ```
 
 ##### Do
-El tipo de animación que se ejecutara(esta dado por el nombre de la clase CSS que representa la animacion). Usted puede crear sus propias clases, usar la magnifica biblioteca de animaciones CSS [animate.css](http://daneden.github.io/animate.css/) u otras similares.
+El tipo de animación que se ejecutara(esta dado por el nombre de la clase CSS que representa la animacion). We strongly recomend you  to use the amazing [animate.css library](http://daneden.github.io/animate.css/) as starting point, this library provides beautiful animations. Also, you can define your own animations.
 
 Ejemplo:
 ```xml
-    <!-- When click in header animate footer with bounceIn animation. -->
-    <header data-anijs="when: click, what: footer, how: bounceIn">
+    <!-- If click in header animate footer with bounceIn animation. -->
+    <header data-anijs="if: click, do: bounceIn, to: footer">
     <!-- ... -->
     </header>
     <footer>
@@ -57,8 +57,8 @@ Elementos que se desean animar. Si no se especifica se tomará el propio element
 
 Ejemplo:
 ```xml
-	<!-- When click in header animate footer. -->
-    <header data-anijs="when: click, what: footer, how: swing">
+	<!-- If click in header animate footer. -->
+    <header data-anijs="if: click, do: swing, to: footer">
     <!-- ... -->
     </header>
     <footer>
