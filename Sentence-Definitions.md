@@ -13,6 +13,18 @@ Algunos ejemplos de eventos son:
 - scroll
 - DOMContentLoaded
 
+Ejemplo:
+```xml
+    <!-- If click in footer animate header. -->
+    <header data-anijs="if: click, on: footer, do: swing">
+    <!-- ... -->
+    </header>
+    <!-- If mouseover header animate footer. -->
+    <footer data-anijs="if: mouseover, on: header do: bounce">
+     <!-- ... -->
+    </footer>
+```
+
 ##### On
 Elementos que pueden lanzar el evento que disparará la animación definido en el [if](#if). Si no se especifica se tomará el propio elemento que contiene la declaracion. Se define mediante un selector CSS.
 
@@ -67,34 +79,34 @@ Ejemplo:
 ```
 
 ##### before
-Nombre de la función que se ejecutará antes de iniciar la animación. Mediante esta se puede controlar si se ejecuta o no la animacion a traves del objeto [animationContext](#animationcontext). Ver [Implementando funciones after y before](#implementando-funciones-after-y-before).
+Nombre de la función que se ejecutará antes de iniciar la animación. Mediante esta se puede controlar si se ejecuta o no la animacion a traves del objeto [[Animation Context | Animation Context Object]]. Mas informcion read [[Writing before and after functions]].
 
 Ejemplo:
 ```xml
-	<!-- When click in header execute beforeAnimationFunction -->
-    <header data-anijs="when: click, how: bounceIn, before: beforeAnimationFunctionName">
+	<!-- if click in header execute beforeAnimationFunction and do bounceIn animation-->
+    <header data-anijs="if: click, do: bounceIn, before: beforeAnimationFunctionName">
     <!-- ... -->
     </header>
 ```
 
 ##### after
-Nombre de la funcion que se ejecutara despues de terminada la animacion. Ver [Implementando funciones after y before](#implementando-funciones-after-y-before).
+Nombre de la funcion que se ejecutara despues de terminada la animacion. Ver [[Writing before and after functions]].
 
 Ejemplo:
 ```xml
-	<!-- When click in header animate it with bounceIn animation and execute afterAnimationFunction -->
-    <header data-anijs="when: click, how: bounceIn, after: afterAnimationFunctionName">
+	<!-- if click in header animate it with bounceIn animation and execute afterAnimationFunction -->
+    <header data-anijs="if: click, do: bounceIn, after: afterAnimationFunctionName">
     <!-- ... -->
     </header>
 ```
 
 ##### helper
-Nombre del ayudante que contiene las funciones after y before de la declaración. Si no se especifica se toma el helper por defecto cuyo nombre es 'default'. Y el cual contiene algunas funciones utiles como [removeAnim](remove-anim-function) la cual permite eliminar las clases asociadas a la animacion cuando esta termine.
+Nombre del ayudante que contiene las funciones after y before de la declaración. Si no se especifica se toma el helper por defecto cuyo nombre es 'default'. Y el cual contiene algunas funciones utiles como [[removeAnim | Remove animation after function]] la cual permite eliminar las clases asociadas a la animacion cuando esta termine.
 
 Ejemplo:
 ```xml
-	<!-- When click in header execute animate header with bounceIn animation and execute afterAnimationFunction -->
-    <header data-anijs="when: click, how: bounceIn, after: afterAnimationFunctionName, helper: animationHelperInstanceName">
+	<!-- If click in header execute animate header with bounceIn animation and execute afterAnimationFunction -->
+    <header data-anijs="if: click, how: do, after: afterAnimationFunctionName, helper: animationHelperInstanceName">
     <!-- ... -->
     </header>
 ```
