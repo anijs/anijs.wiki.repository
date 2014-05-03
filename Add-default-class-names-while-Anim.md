@@ -7,7 +7,7 @@ A veces puede ser necesario agregar nombres de clases determinados para saber qu
 <div class="bounce animated"></div>
 ```
 
-Resultaria poco legible y tener que agregar en los behaviors de las declaraciones estos nombres de clase. 
+Resultaria poco legible tener que agregar en los behaviors de las declaraciones estos nombres de clase. 
 
 ```xml
 <div data-anijs="if: click, do: animated bounce"></div>
