@@ -1,9 +1,9 @@
 Handling Animations
 ==========================
 
-Las animaciones pueden ser manejadas a partir de declaraciones directamente en los elementos HTML de la página. O [mediante Javascript](https://github.com/anijs/anijs/wiki/Handling-Animations-Using-JavaScript).
+Animations can be managed directly from statements in the HTML page elements. Or using [JavaScript](https://github.com/anijs/anijs/wiki/Handling-Animations-Using-JavaScript).
 
-Una declaracion esta compuesta por 1 o muchas sentencias separadas por (;) y cada setencia a su vez por 1 o muchas definiciones.
+Una declaracion esta compuesta por 1 o muchas sentencias separadas por (;) y cada sentencia a su vez por 1 o muchas definiciones.
 
 ```
 Declaration -> Sentence 1; ... ; Sentence n
@@ -18,3 +18,10 @@ Multiple Sentences example.
 </header>
 ```
 
+```xml
+<div class="demo-square demo1" data-anijs="if: click, do: flipInY, to: .container-box"></div>
+```
+
+```xml
+<input id="name" type="text" data-anijs="if: focus, do: wobble, to: p">
+```
