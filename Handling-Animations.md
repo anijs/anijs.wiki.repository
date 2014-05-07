@@ -3,7 +3,7 @@ Handling Animations
 
 Animations can be managed directly from statements in the HTML page elements. Or using [JavaScript](https://github.com/anijs/anijs/wiki/Handling-Animations-Using-JavaScript).
 
-Una declaracion esta compuesta por 1 o muchas sentencias separadas por (;) y cada sentencia a su vez por 1 o muchas definiciones.
+A declaration is composed by one or many sentences, each sentence ends with (;) and is formed by one or many definitions.
 
 ```
 Declaration -> Sentence 1; ... ; Sentence n
@@ -11,7 +11,7 @@ Sentence    -> Definition, ... , Definition n
 Definition  -> if | on | do | to | before | after | helper  
 ```
 
-Multiple Sentences example.
+Examples:
 ```xml
 <header data-anijs="if: click, do: wobble; if: scroll, on: window, do: swing">
 <!-- ... -->

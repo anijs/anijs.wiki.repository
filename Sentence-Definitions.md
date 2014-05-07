@@ -1,112 +1,125 @@
 Sentence Definitions
 ==========================
 
-Para manejar una animación se deben establecer los siguientes parámetros en algún HTML element.
+For managging an animation correctly the following parameters must be stablished in some of the HTML elements.
 
 ##### If
-Indica el evento que disparará la animación. Usted puede ver una lista detallada de eventos [aqui](https://developer.mozilla.org/en-US/docs/Web/Reference/Events).
+Indicates the event trigger for the animation. You may check a detailed list of events [here](https://developer.mozilla.org/en-US/docs/Web/Reference/Events).
 
-Algunos ejemplos de eventos son:
+Some of the events are shown below as guide examples:
 
 - click
 - focus
 - scroll
 - DOMContentLoaded
 
-Ejemplo:
+Example:
+
 ```xml
-    <!-- If click in footer animate header. -->
-    <header data-anijs="if: click, on: footer, do: swing">
-    <!-- ... -->
-    </header>
-    <!-- If mouseover header animate footer. -->
-    <footer data-anijs="if: mouseover, on: header do: bounce">
-     <!-- ... -->
-    </footer>
+<!-- If click on footer do swing animation to header. -->
+<header data-anijs="if: click, on: footer, do: swing">
+<!-- ... -->
+</header>
+<!-- If mouseover on header do bounce animation to footer. -->
+<footer data-anijs="if: mouseover, on: header do: bounce">
+ <!-- ... -->
+</footer>
 ```
 
 ##### On
-Elementos que pueden lanzar el evento que disparará la animación definido en el [if](#if). Si no se especifica se tomará el propio elemento que contiene la declaracion. Se define mediante un selector CSS.
+Stablish the trigger animation elements that waits for the event defined in the [if]. If [On] is not specified the element that holds the declaration owns it. To get the elements a CSS selector is defined. 
 
-Ejemplo especificando el elemento que dispara el evento:
+Specifying the trigger animation element example:
+
 ```xml
-	<!-- If click in footer animate header. -->
-    <header data-anijs="if: click, on: footer, do: swing">
-    <!-- ... -->
-    </header>
-    <footer>
-     <!-- ... -->
-    </footer>
+<!-- If click in footer animate header. -->
+<header data-anijs="if: click, on: footer, do: swing">
+<!-- ... -->
+</header>
+<footer>
+ <!-- ... -->.
+</footer>
 ```
 
-Ejemplo sin especificar el elemento que dispara el evento:
+Trigger animation element with out specification example:
+
 ```xml
-	<!-- If click in header animate header. -->
-    <header data-anijs="if: click, do: swing">
-    <!-- ... -->
-    </header>
-    <footer>
-     <!-- ... -->
-    </footer>
+<!-- If click on header animate footer. -->
+<header data-anijs="if: click, do: swing, to: footer">
+<!-- ... -->
+</header>
+<footer>
+ <!-- ... -->
+</footer>
+```
+
+```xml
+<!-- If click on header animate header. -->
+<header data-anijs="if: click, do: swing">
+<!-- ... -->
+</header>
+<footer>
+ <!-- ... -->
+</footer>
 ```
 
 ##### Do
-El tipo de animación que se ejecutara(esta dado por el nombre de la clase CSS que representa la animacion). We strongly recomend you  to use the amazing [animate.css library](http://daneden.github.io/animate.css/) as starting point, this library provides beautiful animations. Also, you can define your own animations.
+Animation type (behavior) that is going to be executed, it is given by the CSS class name that represents the animation. We strongly recomend you  to use the amazing [animate.css library](http://daneden.github.io/animate.css/) as starting point, this library provides beautiful animations. Also, you can define your own animations.  
 
-Ejemplo:
+Example:
 ```xml
-    <!-- If click in header animate footer with bounceIn animation. -->
-    <header data-anijs="if: click, do: bounceIn, to: footer">
-    <!-- ... -->
-    </header>
-    <footer>
-     <!-- ... -->
-    </footer>
+<!-- If click on header animate footer with bounceIn animation. -->
+<header data-anijs="if: click, do: bounceIn, to: footer">
+<!-- ... -->
+</header>
+<footer>
+ <!-- ... -->
+</footer>
 ```
 
 ##### To
-Elementos que se desean animar. Si no se especifica se tomará el propio elemento que contiene la declaracion.Se define mediante un selector CSS.
+Elements that will be animated.  If [To] is not specified the element that holds the declaration owns it. To get the elements a CSS selector is defined. 
 
-Ejemplo:
+Example:
 ```xml
-	<!-- If click in header animate footer. -->
-    <header data-anijs="if: click, do: swing, to: footer">
-    <!-- ... -->
-    </header>
-    <footer>
-     <!-- ... -->
-    </footer>
+<!-- If click on header do swing animation to footer.-->
+<header data-anijs="if: click, do: swing, to: footer">
+<!-- ... -->
+</header>
+<footer>
+ <!-- ... -->
+</footer>
 ```
 
 ##### before
-Nombre de la función que se ejecutará antes de iniciar la animación. Mediante esta se puede controlar si se ejecuta o no la animacion a traves del objeto [[Animation Context | Animation Context Object]]. Mas informcion read [[Writing before and after functions]].
+Name of the function that will be executed before the animation starts. With this function the animation execution can be controlled throw the object [[Animation Context | Animation Context Object]]. Read [[Writing before and after functions]] for more information.
 
-Ejemplo:
+Example:
 ```xml
-	<!-- if click in header execute beforeAnimationFunction and do bounceIn animation-->
-    <header data-anijs="if: click, do: bounceIn, before: beforeAnimationFunctionName">
-    <!-- ... -->
-    </header>
+<!-- if click on header execute beforeAnimationFunction and do bounceIn animation-->
+<header data-anijs="if: click, do: bounceIn, before: beforeAnimationFunctionName">
+<!-- ... -->
+</header>
 ```
 
 ##### after
-Nombre de la funcion que se ejecutara despues de terminada la animacion. Ver [[Writing before and after functions]].
+Name of the function that will be executed after the animation ends. See [[Writing before and after functions]].
 
-Ejemplo:
+Example:
 ```xml
-	<!-- if click in header animate it with bounceIn animation and execute afterAnimationFunction -->
-    <header data-anijs="if: click, do: bounceIn, after: afterAnimationFunctionName">
-    <!-- ... -->
-    </header>
+<!-- if click on header animate it with bounceIn animation and execute afterAnimationFunction -->
+<header data-anijs="if: click, do: bounceIn, after: afterAnimationFunctionName">
+<!-- ... -->
+</header>
 ```
 
 ##### helper
-Nombre del ayudante que contiene las funciones after y before de la declaración. Si no se especifica se toma el helper por defecto cuyo nombre es 'default'. Y el cual contiene algunas funciones utiles como [[removeAnim | Remove animation after function]] la cual permite eliminar las clases asociadas a la animacion cuando esta termine.
+Name of the helper that contains the after and before function declarations. If it is not specified the 'default' helper is used. The default helper  contains some useful functions, such as [[removeAnim | Remove animation after function]] which allows to eliminate the animation asociated classes when the animation ends.
 
-Ejemplo:
+Examples:
 ```xml
-	<!-- If click in header execute animate header with bounceIn animation and execute afterAnimationFunction -->
-    <header data-anijs="if: click, how: do, after: afterAnimationFunctionName, helper: animationHelperInstanceName">
-    <!-- ... -->
-    </header>
+<!-- If click on header do bounceIn animation to header and execute afterAnimationFunction -->
+<header data-anijs="if: click, do: bounceIn, after: afterAnimationFunctionName, helper: animationHelperInstanceName">
+<!-- ... -->
+</header>
 ```

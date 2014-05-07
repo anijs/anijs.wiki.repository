@@ -3,6 +3,8 @@ Test Cases
 
 ##Define animations declaratively
 
+###Bad Declaration Sintax
+
 ###Define a trigger event for the animation (if).
 - Definir el evento vacío.
 **Comportamiento esperado**
