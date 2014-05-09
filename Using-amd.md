@@ -20,4 +20,4 @@ require(["anijs"], function(AniJS) {
 });
 ```
 
-You can see a [Basic example where is used AniJS with RequireJS and Total.js(NodeJs web  framework)](https://github.com/anijs/examples/tree/gh-pages/anijs-requirejs-totaljs) created by @gallegogt.
+You can see a [Basic example where is used AniJS with RequireJS and Total.js(NodeJs web  framework)](https://github.com/anijs/examples/tree/gh-pages/anijs-requirejs-totaljs) created by [@gallegogt](https://github.com/gallegogt).
