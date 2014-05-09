@@ -40,5 +40,5 @@ Your customized helper always is executed every time you specify it in the defin
 Example:
 
 ```xml
-<button data-anijs="if: click, do: bounceIn, to: 'success-alert', before: beforeFormValidation, helper: validationAnimationHelper"<button/>
+<button data-anijs="if: click, do: bounceIn, to: 'success-alert', before: beforeFormValidation, helper: validationAnimationHelper"><button/>
 ```
