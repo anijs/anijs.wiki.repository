@@ -1,18 +1,18 @@
 Writing before and after functions
 ==================================
 
-Las funciones **before** y **after** son utiles cuando se quieren ejecutar acciones antes o despues de ejecutada una animacion.
+The **before** and **after** definitions are useful when you want to execute actions before or after the animation is executed.  
 
-Estas reciben two params
+These functions may be initiliazed by passing to them two params although they can be void.
 
-- **e** The [event object](https://developer.mozilla.org/en-US/docs/Web/API/Event) that trigger the animation.
+- **e** The [event object](https://developer.mozilla.org/en-US/docs/Web/API/Event) that triggers the animation.
 
 - **animationContext** The [[Animation Context Instance | Animation Context Object]].
 
 ```javascript
 var someBeforeOrAfterFunction = function(e, animationContext){
 	
-	//The event that trigger the animation
+	//The event that triggers the animation
 	console.log(e);
 
 	//The Animation Context Instance
@@ -20,33 +20,33 @@ var someBeforeOrAfterFunction = function(e, animationContext){
 }
 ```
 
-En el caso de la funcion before, usted tiene el poder de ejecutar o no, la animacion, mediante el objeto animationContext.
+In the case of the **before** function, you are able to execute or not the animation through the **animationContext** object.
 
 ```javascript
-	//Obtaining the default helper
-	var animationHelper = AniJS.getHelper();
+//Obtaining the default helper
+var animationHelper = AniJS.getHelper();
 
-	//Defining afterAnimationFunction
-	animationHelper.beforeAnimationFunctionName = function(e, animationContext){
-		if( someVariable ){
-			//Run the animation
-			animationContext.run()
-		}
+//Defining afterAnimationFunction
+animationHelper.beforeAnimationFunctionName = function(e, animationContext){
+	if( someVariable ){
+		//Run the animation
+		animationContext.run()
 	}
+}
 ```
 
-Despues de implementar las funciones after y before, estas deben ser registradas en un helper. Por defecto AniJS tiene un empty helper cuyo nombre es default. Se puede acceder al mismo llamando a la funcion **getHelper** sin ningun parametro.
+After the Before and After are defined, they have to be registered in a helper. AniJS has default empty helper called Default. You can access to it calling the **getHelper** function with no parameters.
 
 ```javascript
-	//Obtaining the default helper
-	var animationHelper = AniJS.getHelper();
+//Obtaining the default helper
+var animationHelper = AniJS.getHelper();
 
-	//Defining afterAnimationFunction
-	animationHelper.afterAnimationFunctionName = function(e, animationContext){
-		console.log('Running afterAnimationFunction');
-		console.log('Event triggered');
-		console.log(e);
-	}
+//Defining afterAnimationFunction
+animationHelper.afterAnimationFunctionName = function(e, animationContext){
+	console.log('Running afterAnimationFunction');
+	console.log('Event triggered');
+	console.log(e);
+}
 ```
 
-Si lo desea usted puede crear sus propios helpers. Leer mas [[Registering new Helpers]].
+However, if it is your desire you can create your owns helpers. Read more [[Registering new Helpers]].

@@ -1,20 +1,20 @@
 AnimationEnd and TransitionEnd normalization
 ============================================
 
-Los eventos AnimationEnd and TransitionEnd are differentes en dependencia del browser.Por ejemplo:
+The AnimationEnd and TransitionEnd events varies depending on the browser.
 
 | Agent   | AnimationEnd Event | TransitionEnd Event |  
 | ----    | -----------------  | ------------------- |  
-| W3C     | animationend       | animationend        |  
-| Mozilla | mozAnimationEnd    | mozAnimationEnd     |  
-| Webkit  | webkitAnimationEnd | webkitAnimationEnd  |  
-| Opera   | oanimationend      | oanimationend		 |  
+| W3C     | animationend       | transitionend        |  
+| Mozilla | mozAnimationEnd    | mozTransitionEnd     |  
+| Webkit  | webkitAnimationEnd | webkitTransitionEnd  |  
+| Opera   | oanimationend      | otransitionEnd	 |  
 
-AniJS se rige por el estandar de la W3C,**animationend** and **transitionend**.
+AniJS is ruled by the W3C standar (**animationend** and **transitionend**).
 
-In AniJS animation event trigger definition use only **animationend** or **transitionend**.
 
-Ejemplo Animationend Event:
+Animationend Event example: 
+
 ```xml
     <header data-anijs="if: animationend, on: footer, do: bounceIn">
     <!-- ... -->
@@ -24,7 +24,8 @@ Ejemplo Animationend Event:
     </footer>
 ```
 
-Ejemplo Transtitionend Event:
+Transtitionend Event example: 
+
 ```xml
     <header data-anijs="if: transtitionend, on: footer, do: bounceIn">
     <!-- ... -->

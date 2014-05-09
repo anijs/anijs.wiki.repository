@@ -1,9 +1,9 @@
 Registering new Helpers
 ==========================
 
-Un helper es una clase estatica que contiene las funciones que pueden ser invocadas a traves de los parametros **before** y **after**.
+A helper is a static class that contains the functions that can be invoked through the **before** and **after** definition.
 
-Por defecto AniJS incluye un helper con la implementacion de algunas funciones utiles like [[Remove animation after function]]. The implementation code look like this:
+AniJS includes a helper by default with some useful functions, such as [[Remove animation after function]]. The implementation code looks like this:
 
 ```javascript
 var defaultHelper = {
@@ -20,22 +20,24 @@ var defaultHelper = {
 }
 ```
 
-Usted puede agregar funciones a este helper accediendo al mismo mediante la funcion **getHelper** sin ningun parametro. Usted puede ver algunos ejemplos de esto en[[Writing before and after functions]].
+You can add more functions to this helper by accessing it through the function **getHelper** and passing it no parameters. You may see a few examples of this in [[Writing before and after functions]].
 
-En aplicaciones complejas puede que sea necesario registrar varios helpers para tener un mayor encapsulamiento.
+In complex applications it may be necessary to register several helpers for more encapsulation.
 
 ```javascript
-	var validationAnimationHelper = {
-		beforeFormValidation : function(e, contextAnimation){
-			if( App.validate(App.Forms) ){
-				contextAnimation.run();
-			}
+var validationAnimationHelper = {
+	beforeFormValidation : function(e, contextAnimation){
+		if( App.validate(App.Forms) ){
+			contextAnimation.run();
 		}
 	}
-	AniJS.registerHelper('validationAnimationHelper', validationAnimationHelper);
+}
+AniJS.registerHelper('validationAnimationHelper', validationAnimationHelper);
 ```
 
-Your custom helper always se ejecutara cada vez que se ponga.
+Your customized helper always is executed every time you specify it on a definition. 
+
+Example:
 
 ```xml
 <button data-anijs="if: click, do: bounceIn, to: 'success-alert', before: beforeFormValidation, helper: validationAnimationHelper"<button/>
