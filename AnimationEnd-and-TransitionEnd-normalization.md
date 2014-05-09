@@ -16,21 +16,21 @@ AniJS is ruled by the W3C standar (**animationend** and **transitionend**).
 Animationend Event example: 
 
 ```xml
-    <header data-anijs="if: animationend, on: footer, do: bounceIn">
-    <!-- ... -->
-    </header>
-    <footer data-anijs="if: click, do: hinge">
-     <!-- ... -->
-    </footer>
+<header data-anijs="if: animationend, on: footer, do: bounceIn">
+<!-- ... -->
+</header>
+<footer data-anijs="if: click, do: hinge">
+ <!-- ... -->
+</footer>
 ```
 
 Transtitionend Event example: 
 
 ```xml
-    <header data-anijs="if: transtitionend, on: footer, do: bounceIn">
-    <!-- ... -->
-    </header>
-    <footer data-anijs="if: click, do: hinge">
-     <!-- ... -->
-    </footer>
+<header data-anijs="if: transtitionend, on: footer, do: bounceIn">
+<!-- ... -->
+</header>
+<footer data-anijs="if: click, do: hinge">
+ <!-- ... -->
+</footer>
 ```

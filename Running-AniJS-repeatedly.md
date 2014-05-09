@@ -1,11 +1,11 @@
 Running AniJS repeatedly
 ==========================
 
-AniJS por defecto recorre todos los nodos del documento, y parsea todos los nodos que contengan el tag data-anijs. No obstante usted puede volver a parsear estos invocando la funcion **run**. 
+AniJS by default goes through all of the nodes of the document and parse every node with the data-anijs tag. Although you can do directly this by calling  **run**. 
 
-Tenga en cuenta que las subscripciones de eventos viejas seran eliminadas.
+Be aware that all old events subscriptions will be eliminated .
 
 ```javascript
-	//Traveled the DOM scope parsing all nodes with data-anijs tag.
-	AniJS.run();
+//Traveled the DOM scope parsing all nodes with data-anijs tag.
+AniJS.run();
 ```

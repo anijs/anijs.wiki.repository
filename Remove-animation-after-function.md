@@ -1,7 +1,7 @@
 Remove animation after function
 ===============================
 
-In several ocations it is necessary to eliminate the classes that defines the animations after these ones are executed. For this matter AniJS provides a default helper with the function **removeAnim**. This function can be specified by the **after** definition. 
+Sometimes it's necessary to eliminate the classes that defines the animations after these ones are executed. For this matter AniJS provides a default helper with the function **removeAnim**. This function can be specified by the **after** definition. 
 
 Example: 
 

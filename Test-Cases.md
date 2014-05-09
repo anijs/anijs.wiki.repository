@@ -6,123 +6,123 @@ Test Cases
 ###Bad Declaration Sintax
 
 ###Define a trigger event for the animation (if).
-- Definir el evento vacío.
-**Comportamiento esperado**
+- Define empty event.
+**Expected behavior**
 
-- Definir eventos que no existan.
-**Comportamiento esperado**
+- Define events that do not exist.
+**Expected behavior**
 
-- Definir 3 eventos al azar. 
-**Comportamiento esperado**
+- Define 3 events random. 
+**Expected behavior**
 
 ###Define the elements from which the trigger event is launched (on).
-- Definir el selector vacío.
-- Definir selector de un elemento que no exista.
-- Definir selector con caracteres raros. 
+- Define empty selector.
+- Define selector of an element that does not exist.
+- Define selector with rare characters. 
 
 ###Animation behavior definition.(do)
-- Definir animacion vacia.
-- Definir animacion que no exista. 
+- Define empty animation.
+- Define an animation that does not exist. 
 
 ###Animation elements target definition.(to)
-- Definir el selector vacío.
-- Definir selector de un elemento que no exista.
-- Definir selector con caracteres raros.
+- Define empty selector.
+- Define selector of an element that does not exist.
+- Define selector with rare characters.
 
 ###Execute a function before animation run.
-- Crear una funcion vacía.
-- Crear una funcion que no este registrada en el helper.
-- Crear en el helper una variable con el mismo nombre de la función.
+- Create an empty function.
+- Create a function that it is not registered in the helper.
+- Create in the a variable with the same name of the function.
 
 ###Stop animation execution before running it.
-- Detener la animacion.
-- No detener la animacion.
+- Stop the animation.
+- Do not stop the animation.
 
 
 ###Execute a function after animation run.
-- Crear una funcion vacía.
-- Crear una funcion que no este registrada en el helper.
-- Crear en el helper una variable con el mismo nombre de la función.
+- Create an empty function.
+- Create a function that it is not registered in the helper.
+- Create in the a variable with the same name of the function.
 
 ###Helpers instance definition.
-- Definir un helper nulo.
-- Definir un helper que sea una function.
-- Registrar helper vacio.
+- Define a null helper.
+- Definir a helper to be a function.
+- Register empty helper.
 
 ###animationEnd and transitionEnd normalization.
-- Poner listener animaciones en al menos 3 elementos HTML de la página.
-- Poner listener trancisiones en al menos 3 elementos HTML de la página.
+- Set animations in, at least 3 HTML elements of the page.
+- Set tansitions listener in, at least 3 HTML elements of the page.
 
 ###Attach events from window and document objects
-- Definir un evento que no exista en el window.
-- Definir un evento que no exista en el document.
+- Define an event that do not exist in the window.
+- Define an event that do not exist in the document.
 
 ###Running AniJS repeatedly.
-- Correr AniJS al menos 10 veces seguidas.
-- Ver si la RAM sube.
+- Run AniJS at least 10 times .
+- See if RAM goes up.
 
 ###Change the root DOM scope.
-- Cambiar root scope, a uno que no exista.
-- Pasar el selector vacío.
+- Change root scope, to one that do not exist.
+- Pass as argument empty selector.
 
 ###Manage animations using JavaScript.
-- Crear una animacion con el event vacío.
+- Create an animation with empty event.
 
-- Crear una animacion con un event que no exista.
+- Create an animation with event that does not exist.
 
-- Crear una animacion con un objeto evento.
+- Create an animation with an event object.
 
-- Crear una animacion con el eventTarget vacío.
+- Create an animation with empty eventTarget.
 
-- Crear una animacion con un eventTarget que no exista.
+- Create an animation with null eventTarget.
 
-- Crear una animacion con un objeto eventTarget.
+- Create an animation with an objeto eventTarget.
 
-- Crear una animacion con el behaviorTarget vacío.
+- Create an animation with empty behaviorTarget.
 
-- Crear una animacion con un behaviorTarget que no exista.
+- Create an animation with null behaviorTarget.
 
-- Crear una animacion con un objeto behaviorTarget.
+- Create an animation with behaviorTarget object.
 
-- Crear una animacion con el behavior vacío.
+- Create an animation with empty behavior.
 
-- Crear una animacion con un behavior que no exista.
+- Create an animation with null behavior.
 
-- Crear una animacion con un objeto behavior.
+- Create an animation with behavior object.
 
-- Crear una animacion con el after vacío.
+- Create an animation with empty after.
 
-- Crear una animacion con un after que no exista.
+- Create an animation with after that does not exist.
 
-- Crear una animacion con un objeto after.
+- Create an animation with after object.
 
-- Crear una animacion con el before vacío.
+- Create an animation with empty before .
 
-- Crear una animacion con un before que no exista.
+- Create an animation with before that does not exist.
 
-- Crear una animacion con un objeto before.
+- Create an animation with an object before.
 
-- Crear una animacion con el helper vacío.
+- Create an animation with empty helper.
 
-- Crear una animacion con un helper que no exista.
+- Create an animation with a helper that does not exist.
 
-- Crear una animacion con un objeto helper.
+- Create an animation with object helper.
 
 
 ###Purge events from any node.
 
-- Atachar varios eventos a un nodo.
-- Quitar varios eventos de un nodo.
+- Attach several events to a node.
+- Remove several events from a node.
 
 ###Register new helpers.
 
-- Registrar un helper nulo.
-- Registrar un helper que es una function.
-- Registrar un helper con el mismo nombre de uno que yan exista.(Default por ejemplo)
+- Register a null helper.
+- Register a helper that it's a function.
+- Register a helper with the same name of one existent.(e.g Default)
 
 ###Attach new functions to the helpers.
-- Agregar una function a un helper.
-- Sobreescribir una function que ya exista en el helper.
+- Add a function to a helper.
+- Overwrite a function in the helper.
 
 ###removeAnim Default helper function.
-- Correr una animación y ver si se quita.
+- Run an animation and observe if it's removed.

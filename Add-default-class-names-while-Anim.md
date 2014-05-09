@@ -1,23 +1,23 @@
 Add default class names while Anim
 ==================================
 
-A veces puede ser necesario agregar nombres de clases determinados para saber que un objeto se esta animando. En el caso de la biblioteca [animate.css library](http://daneden.github.io/animate.css/) se usa el nombre de clase 'animated'.
+Sometimes it can be necesary to add class names to know if an object it's being animated. In case of [animate.css library](http://daneden.github.io/animate.css/) the class name used is **animated**.
 
 ```xml
 <div class="bounce animated"></div>
 ```
 
-Resultaria poco legible tener que agregar en los behaviors de las declaraciones estos nombres de clase. 
+It would be bothersome add in the behaviors these class names.
 
 ```xml
 <div data-anijs="if: click, do: animated bounce"></div>
 ```
 
-Por esta razon AniJS tiene un atributo cuyo nombre es **classNamesWhenAnim** y que puede ser cambiado mediante el metodo **setClassNamesWhenAnim**.
+That's why AniJS has an attribute **classNamesWhenAnim** that can be change through the method **setClassNamesWhenAnim**.
 
 ```javascript
-	//Put #container as root travel scope
-	AniJS.setClassNamesWhenAnim('animated');
+//Put #container as root travel scope
+AniJS.setClassNamesWhenAnim('animated');
 ```
 
-De ahora en adelante cada vez que se valla a animar un objeto AniJS le pondrá tambien esta clase.
+From now on, every time you need to animate an object with AniJS you will use this class too. 

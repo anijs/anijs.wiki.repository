@@ -64,7 +64,7 @@ Trigger animation element with out specification example:
 ```
 
 ##### Do
-Animation type (behavior) that is going to be executed, it is given by the CSS class name that represents the animation. We strongly recomend you  to use the amazing [animate.css library](http://daneden.github.io/animate.css/) as starting point, this library provides beautiful animations. Also, you can define your own animations.  
+Animation type (behavior) that is going to be executed, it is given by the CSS class name that represents the animation. We strongly recomend you to use the amazing [animate.css library](http://daneden.github.io/animate.css/) as starting point, this library provides beautiful animations. Also, you can define your own animations.  
 
 Example:
 ```xml

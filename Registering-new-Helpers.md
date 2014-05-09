@@ -35,7 +35,7 @@ var validationAnimationHelper = {
 AniJS.registerHelper('validationAnimationHelper', validationAnimationHelper);
 ```
 
-Your customized helper always is executed every time you specify it on a definition. 
+Your customized helper always is executed every time you specify it in the definition. 
 
 Example:
 

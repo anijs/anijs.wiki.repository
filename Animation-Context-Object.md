@@ -1,55 +1,57 @@
 Animation Context Object
 ============================================
 
-Animation Context Object fue creado con el objetivo de poder controlar los parametros de ejecucion de una animacion, y la ejecucion de la animacion misma de manera asincrona. 
+Animation Context Object is the object that can control the execution arguments of an animation, and the animation execution itself asynchronously. 
 
-Esto resulta de mucha utilidad en las funciones [[before| Writing before and after functions]] y [[after | Writing before and after functions]] sobre todo, ya que en depencia de determinadas condiciones podemos ejecutar la animacion o no, ademas de tener el control de los parametros de la misma antes y despues de ser ejecutada.
+This is very useful mainly in the functions [[before| Writing before and after functions]] and [[after | Writing before and after functions]], because, depending of certain conditions we can execute the animation or not and have the control of its arguments before and after being executed.
 
-Using AnimationContext we can lograr amazing things, be creative and [tell us](https://github.com/anijs/anijs/issues) about it.
+With AnimationContext we can accomplish amazing things, be creative and [tell us](https://github.com/anijs/anijs/issues) about it.
 
-Ejemplo implementacion de una function before:
+Example of a function before: 
+
 ```javascript
 
 //beforeAnimSomething function implementation
 defaultHelper.beforeAnimSomething: function(e, animationContext) {
 
 	if(Balloon === 'red'){
-		//Se ejecuta la animation
+		//Animation execute
 		animationContext.run();
 	}
 
-	//La animacion no se ejecuta
+	//The animation is not executed
 }
 
 ```
 
-Ejemplo implementacion de una function after:
+Example of a function after: 
+
 ```javascript
-//AniJS removeAnim implementation en default Helper
+//AniJS removeAnim implementation in default Helper
 defaultHelper.removeAnim: function(e, animationContext) {
-    //Clear the animation classes que vienen en el behavior
+    //Clear the animation classes from the behavior
     animationContext.nodeHelper.removeClass(e.target, animationContext.behavior);
 }
 ```
 
-Los atributos y metodos de Animation Context Object are:
+The attributes and methods from Animation Context Object are:
 
 - **behaviorTargetList**  
-Lista de elementos que seran animados.
+List of elements to be animated.
 	
 - **nodeHelper**  
 	DOM manipulation helper class. 
 
 - **animationEndEvent**  
-	Animation End Event Prefix correctamente normalizado segun el browser.
+	Animation End Event Prefix correctly normalized according to the browser.
 
 - **behavior**  
-	Clases css que se le agregaran al elemento.
+	Css class that can be added to the element.
 
 - **after**  
-	Function after que se ejecutara despues de terminada la animacion.
+	after Function that is executed after the animation finished.
 
 - **run()**  
-	La animacion se ejecuta.
+	Run the animation.
 
-Si usted quiere saber mas acerca de esto, please go to the [source code](https://github.com/anijs/anijs/blob/master/src/anijs.js)
+If you want to know more, please go to the [source code](https://github.com/anijs/anijs/blob/master/src/anijs.js)
