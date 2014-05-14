@@ -7,7 +7,9 @@ The documentation is not completely ready yet :(
 
 AniJS permite ejecutar las animaciones a partir de eventos personalizados. Usted puede crear sus propios eventos y subscribir las animaciones a los mismos.
 
-**Ventajas** 
+You can see a [Codepen Example](http://codepen.io/darielnoel/pen/KzsFn?editors=001) after read bellow.
+
+#####Ventajas
 
 - Cross-browser events.
 - Integrate touch gestures.
@@ -31,7 +33,7 @@ Example:
 </header>
 ```
 
-**Obteniendo el EventProvider Object**
+#####Obteniendo el EventProvider Object
 
 After AniJS running, you can obtain the EventProvider a traves del metodo **getEventProvider**, el cual recive como parametro el ID del event provider, que es el mismo de la definicion.
 
@@ -40,24 +42,20 @@ After AniJS running, you can obtain the EventProvider a traves del metodo **getE
 Example: 
 
 ```javascript
-
 MyApp.GestureEventProvider = AniJS.getEventProvider('GestureEventProvider');
-
 ```
 
-**Disparando eventos**
+#####Disparando eventos
 
 Usted puede usar el metodo **dispatchEvent** para disparar cualquier evento que halla sido declarado previamente.
 
 Example: 
 
 ```javascript
-
 MyApp.GestureEventProvider.dispatchEvent('Double-tap');
-
 ```
 
-**Other usefull methods**
+#####Other usefull methods
 
 - addEventListener
 	

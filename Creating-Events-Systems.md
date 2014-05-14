@@ -20,10 +20,9 @@ You can create your propio event system overwriting the default AniJS Event Syst
 - removeEventListenerHelper
 
 
-- **isEventTarget**
+#####isEventTarget
 
 ```javascript
-
 /**
  * Return true if the element it's an event target object
  * @method isEventTarget
@@ -39,13 +38,11 @@ AniJS.EventSystem.isEventTarget: function(element) {
     //return (element.trigger) ? 1 : 0;
 
 }
-
 ```
 
-- **createEventTarget**
+#####createEventTarget
 
 ```javascript
-
 /**
  * Create new EventTarget element
  * @method createEventTarget
@@ -60,13 +57,11 @@ AniJS.EventSystem.createEventTarget: function() {
     //return $({});
 
 }
-
 ```
 
-- **addEventListenerHelper**
+#####addEventListenerHelper
 
 ```javascript
-
 /**
  * Put a listener in the object
  * @method addEventListenerHelper
@@ -85,13 +80,11 @@ AniJS.EventSystem.addEventListenerHelper: function(eventTargetItem, event, liste
     //$(eventTargetItem).on(event, listener);
 
 }
-
 ```
 
-- **removeEventListenerHelper**
+#####removeEventListenerHelper
 
 ```javascript
-
 /**
  * Put a listener of the object
  * @method removeEventListenerHelper
@@ -107,6 +100,5 @@ AniJS.EventSystem.removeEventListenerHelper: function(element, type, listener) {
 	//JQuery Events System looks like this
 	$(element).off(type, listener);
 }
-
 ```
 You can ckeck los events system que han sido implementados hasta ahora en [Sistemas de Eventos Implementados](https://github.com/anijs/anijs/tree/master/src/events_system). Si usted crea su propio EventSystem, usted puede ponerlo ahi y asi compartirlo con la comunidad.
