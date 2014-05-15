@@ -1,13 +1,11 @@
 JQuery Events System
 ============================================
-This feature it's available in [v0.3.0](https://github.com/anijs/anijs/tree/v0.3.0)
-
-The documentation is not completely ready yet :(
 
 
 The JQuery Events System is a concrete implementation of the [[Events System Interface | Creating Events Systems]].
 
-You can see a [Codepen Example](http://codepen.io/darielnoel/pen/nltiL?editors=001) after read bellow.
+
+You can see a [Codepen Example](http://codepen.io/darielnoel/pen/nltiL?editors=001) you must read bellow first.
 
 #####Use
 
@@ -34,7 +32,7 @@ You can see a [Codepen Example](http://codepen.io/darielnoel/pen/nltiL?editors=0
 AniJS.run();
 ```
 
-Despues de esto AniJS gestiona los eventos mediante la implementacion provista por JQuery. Usando los metodos:
+After this AniJS manage the events through the JQuery Events System implementation using the methods:
 
 - **trigger**
 
@@ -48,14 +46,15 @@ Despues de esto AniJS gestiona los eventos mediante la implementacion provista p
 
 	Remove an event handler.
 
-En sus [[EventProvider Object | Custom Events Listening]] usted podria hacer por ejemplo:
+
+On its [[EventProvider Object | Custom Events Listening]] you may do for instance:
 
 ```javascript
 //Using the JQuery Events System
 MyApp.GestureEventProvider.trigger('Double-tap');
 
-//Using the default AniJS Event System
+//Using the default AniJS Events System
 //MyApp.GestureEventProvider.dispatchEvent('Double-tap');
 ```
 
-Si usted esta usando JQuery en su aplicacion, emplear the JQuery Event System le brinda una mayor coherencia a su codigo, ademas de brindar una mejor cross-browser implementation.
+If you are using JQuery on your application, using the JQuery´s Events System gives your code more coherence. Besides it provides a better cross-browser implementation.

@@ -1,15 +1,12 @@
 Creating Events Systems
 ============================================
-This feature it's available in [v0.3.0](https://github.com/anijs/anijs/tree/v0.3.0)
-
-The documentation is not completely ready yet :(
 
 
-The EventSystem es un concepto que describe una interfaz para manejo de eventos. Mediante este podemos permitir que AniJS maneje los eventos a traves de otras bilbiotecas like JQuery. Take a look to [[JQuery Events System]].
+The Events System as a concept describes an event handling interface. Through this concept we can allow  AniJS to manage the events from other libraries, such as JQuery. Take a look to [[JQuery Events System]].
 
-The Default Events System of AniJS, is implemented using the native browser API, an uses the sames names of the standar [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget).
+The Default Events System of AniJS, is implemented using the native browser API, and uses the sames names of the standar [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget).
 
-You can create your propio event system overwriting the default AniJS Event System methods.
+You can create your own Events System overwriting the default AniJS Event System methods:
 
 - isEventTarget
 
@@ -100,5 +97,6 @@ AniJS.EventSystem.removeEventListenerHelper: function(element, type, listener) {
 	//JQuery Events System looks like this
 	$(element).off(type, listener);
 }
-```
-You can ckeck los events system que han sido implementados hasta ahora en [Sistemas de Eventos Implementados](https://github.com/anijs/anijs/tree/master/src/events_system). Si usted crea su propio EventSystem, usted puede ponerlo ahi y asi compartirlo con la comunidad.
+``` 
+
+You can check the events system that have been implemented so far in [Implemented Events Systems](https://github.com/anijs/anijs/tree/master/src/events_system). If you create some Events System you may put it on [Implemented Events Systems](https://github.com/anijs/anijs/tree/master/src/events_system) and share it with the community.

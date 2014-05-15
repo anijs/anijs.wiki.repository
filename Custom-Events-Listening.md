@@ -1,15 +1,12 @@
 Custom Events Listening
 ============================================
-This feature it's available in [v0.3.0](https://github.com/anijs/anijs/tree/v0.3.0)
-
-The documentation is not completely ready yet :(
 
 
-AniJS permite ejecutar las animaciones a partir de eventos personalizados. Usted puede crear sus propios eventos y subscribir las animaciones a los mismos.
+AniJS allows to execute the animations using customized events as a trigger. You can create your own events and attach the animations to them.
 
-You can see a [Codepen Example](http://codepen.io/darielnoel/pen/KzsFn?editors=001) after read bellow.
+You can see a [Codepen Example](http://codepen.io/darielnoel/pen/KzsFn?editors=001)you must read bellow first.
 
-#####Ventajas
+#####Advantages
 
 - Cross-browser events.
 - Integrate touch gestures.
@@ -17,26 +14,29 @@ You can see a [Codepen Example](http://codepen.io/darielnoel/pen/KzsFn?editors=0
 
 **EventProvider**
 
-Un EventProvider, es un objeto cuyos eventos son escuchados por las animaciones gestionadas por AniJS. Si hay alguna animación cableada con alguno de estos, la misma será ejecutada.
+An EventProvider is an interface that allows AniJS to listen complex events. From now on you can run animations when a complex event is triggered. 
 
-Creemos que se pueden lograr cosas interesantes usando esta filosofia. Be creative and share your custom events providers with the comunity.
+We strongly believe that interesting things can be achieved using this philosophy. Be creative!.
+
 
 **Declaring EventProviders**
 
-You can declare an event provider using **$** chart en el principio del valor de una definicion **on**.  
-El tipo de evento se especifica en la definition **if**.
+You can declare an EventProvider using **$** chart at the begining of the **on** definition.  
 
-Example:
+The event type must be specified on the **if** definition.
+
+Example: 
+
 ```xml
 <header data-anijs="if: Double-tap, on: $GestureEventProvider, do: wobble animated">
 <!-- ... -->
 </header>
 ```
 
-#####Obteniendo el EventProvider Object
+#####Getting the EventProvider Object
 
-After AniJS running, you can obtain the EventProvider a traves del metodo **getEventProvider**, el cual recive como parametro el ID del event provider, que es el mismo de la definicion.
 
+After AniJS has ran, you can obtain an specific EventProvider through the **getEventProvider** method, that use the EventProvider ID as a parameter(the same that was stablished on the definition).
 
 
 Example: 
@@ -45,9 +45,10 @@ Example:
 MyApp.GestureEventProvider = AniJS.getEventProvider('GestureEventProvider');
 ```
 
-#####Disparando eventos
+#####Triggering events
 
-Usted puede usar el metodo **dispatchEvent** para disparar cualquier evento que halla sido declarado previamente.
+
+You can use the **dispatchEvent** method to trigger any previously specified event.
 
 Example: 
 
@@ -55,7 +56,7 @@ Example:
 MyApp.GestureEventProvider.dispatchEvent('Double-tap');
 ```
 
-#####Other usefull methods
+#####Other useful methods
 
 - addEventListener
 	
@@ -70,4 +71,4 @@ MyApp.GestureEventProvider.dispatchEvent('Double-tap');
 	Dispatch an event to this EventTarget.
 
 
-The AniJS event system, usa the same names of the standar implementation. However you can use another event systems, like [[JQuery Events System]]. Or create el tuyo propio, read more about it in [[Creating Events Systems]].
+The AniJS event system uses the same names of the standar implementation. However you can use another event system, such as [[JQuery Events System]] or you can even create your own, read more about it in [[Creating Events Systems]].
