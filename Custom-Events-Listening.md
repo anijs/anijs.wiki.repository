@@ -4,7 +4,7 @@ Custom Events Listening
 
 AniJS allows to execute the animations using customized events as a trigger. You can create your own events and attach the animations to them.
 
-You can see a [Codepen Example](http://codepen.io/darielnoel/pen/KzsFn?editors=001)you must read bellow first.
+You can see a [Codepen Example](http://codepen.io/darielnoel/pen/KzsFn?editors=001) you must read bellow first.
 
 #####Advantages
 
