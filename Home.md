@@ -17,6 +17,7 @@ AniJS is a declarative handling library for CSS animations. The main objective i
 
 - [[Writing before and after functions]]
 - [[Remove animation after function]]
+- [[Hold animation after function]]
 - [[Registering new Helpers]]
 - [[Listening events from document and window]]
 - [[AnimationEnd and TransitionEnd normalization]]

@@ -1,6 +1,11 @@
 Remove animation after function
 ===============================
 
+By default AniJS remove the classes that defines the animations after these ones are executed. If you want to hold it, you may use the function **holdAnimClass**.Read more about [[Hold animation after function]].
+
+The description below is for the older versions of anijs. Using the removeAnim function is no longer necessary since [v0.4.0](https://github.com/anijs/anijs/releases/tag/v0.4.0). However previous versions are supported.
+
+--------------------------------------------
 Sometimes it's necessary to eliminate the classes that defines the animations after these ones are executed. For this matter AniJS provides a default helper with the function **removeAnim**. This function can be specified by the **after** definition. 
 
 Example: 
