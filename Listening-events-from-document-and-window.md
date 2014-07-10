@@ -22,3 +22,17 @@ Example:
 <!-- ... -->
 </header>
 ```
+#onRunFinished Event
+
+Added since v0.5.0 version.
+
+Note that the **load** or **DOMContentLoaded**, events are executed before AniJS run. If you want to run an animation loaded immediately after the page you should use the default event **onRunFinished**.
+
+Example: 
+
+```xml
+<!-- If  scroll then animate header with bounceIn animation-->
+<header data-anijs="if: onRunFinished, on: $AniJSEventProvider, do: swing">
+<!-- ... -->
+</header>
+```
