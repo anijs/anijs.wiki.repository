@@ -1,21 +1,10 @@
-Welcome to the AniJS wiki!
-==========================
-
-AniJS is a declarative handling library for UI interactions. 
-It provides an easy and quick method for  prototyping and developing UI interfaces.
-
-##Documentation Topics
-
-
 ###Basic Topics
 
-- [[How use it?|How-use-it?]]
-- [[The AniJS Language| The-language]]
+- [[How use it? | How-use-it?]]
+- [[The AniJS Lenguage | The-language]]
 - [[Sentence Definitions]]
-- [[Playing with CSS classes|Playing-with-CSS-classes]]
-- [[The current element|Refer-to-the-current-element]]
-
-
+- [[Playing with CSS classes | Playing-with-CSS-classes]]
+- [[The current element | Refer-to-the-current-element]]
 
 
 ###Advanced Topics
@@ -24,6 +13,7 @@ It provides an easy and quick method for  prototyping and developing UI interfac
 - [[Remove animation after function]]
 - [[Hold animation after function]]
 - [[Registering new Helpers]]
+- [[Main helpers]]
 - [[Listening events from document and window]]
 - [[AnimationEnd and TransitionEnd normalization]]
 - [[Add default class names while Anim]]
@@ -37,3 +27,4 @@ It provides an easy and quick method for  prototyping and developing UI interfac
 - [[JQuery Events System]]
 - [[Using AMD | Using-amd]]
 - [[Test Cases]]
+- [[Deprecated]]
