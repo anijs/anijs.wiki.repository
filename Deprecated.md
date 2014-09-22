@@ -1,0 +1,18 @@
+Deprecated
+=========================
+
+##*Naming functions*
+
+*The names of the functions that are followed by the reserved words after and before must be written with $ at the beginning of the function name.*
+
+*Incorrect form*
+
+```xml
+    <div data-anijs="if: click, on: li, do: fadeIn animated, after: children"> </div>
+```
+
+*Correct form*
+
+```xml
+    <div data-anijs="if: click, on: li, do: fadeIn animated, to: $children"> </div>
+```
