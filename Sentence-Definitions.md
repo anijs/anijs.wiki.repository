@@ -4,6 +4,7 @@ Sentence Definitions
 For managging an animation correctly the following parameters must be stablished in some of the HTML elements.
 
 ##### If
+
 Indicates the event trigger for the animation. You may check a detailed list of events [here](https://developer.mozilla.org/en-US/docs/Web/Reference/Events).
 
 Some of the events are shown below as guide examples:
@@ -27,7 +28,8 @@ Example:
 ```
 
 ##### On
-Stablish the trigger animation elements that waits for the event defined in the [if]. If [On] is not specified the element that holds the declaration owns it. To get the elements a CSS selector is defined. 
+
+Stablish the trigger animation elements that waits for the event defined in the [if]. If [On] is not specified the element that holds the declaration owns it. To get the elements a CSS selector is defined.
 
 Specifying the trigger animation element example:
 
@@ -64,7 +66,8 @@ Trigger animation element with out specification example:
 ```
 
 ##### Do
-Animation type (behavior) that is going to be executed, it is given by the CSS class name that represents the animation. We strongly recomend you to use the amazing [animate.css library](http://daneden.github.io/animate.css/) as starting point, this library provides beautiful animations. Also, you can define your own animations.  
+
+Animation type (behavior) that is going to be executed, it is given by the CSS class name that represents the animation. We strongly recomend you to use the amazing [animate.css library](http://daneden.github.io/animate.css/) as starting point, this library provides beautiful animations. Also, you can define your own animations.
 
 Example:
 ```xml
@@ -78,7 +81,7 @@ Example:
 ```
 
 ##### To
-Elements that will be animated.  If [To] is not specified the element that holds the declaration owns it. To get the elements a CSS selector is defined. 
+Elements that will be animated.  If [To] is not specified the element that holds the declaration owns it. To get the elements a CSS selector is defined.
 
 Example:
 ```xml
@@ -91,7 +94,7 @@ Example:
 </footer>
 ```
 
-##### before
+##### Before
 Name of the function that will be executed before the animation starts. With this function the animation execution can be controlled throw the object [[Animation Context | Animation Context Object]]. Read [[Writing before and after functions]] for more information.
 
 Example:
@@ -102,7 +105,7 @@ Example:
 </header>
 ```
 
-##### after
+##### After
 Name of the function that will be executed after the animation ends. See [[Writing before and after functions]].
 
 Example:
@@ -113,7 +116,7 @@ Example:
 </header>
 ```
 
-##### helper
+##### Helper
 Name of the helper that contains the after and before function declarations. If it is not specified the 'default' helper is used. The default helper  contains some useful functions, such as [[removeAnim | Remove animation after function]] which allows to eliminate the animation asociated classes when the animation ends.
 
 Examples:
