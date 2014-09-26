@@ -16,7 +16,7 @@ Example:
 ```
 data-anijs  -> Sentence 1; ... ; Sentence n
 Sentence    -> Definition, ... , Definition n
-Definition  -> if | on | do | to | before | after | helper  
+Definition  -> if | on | do | to | before | after | helper
 ```
 
 A **data-anijs** is composed by one or many **sentences**, each sentence ends with (;) and is formed by one or many **definitions**.

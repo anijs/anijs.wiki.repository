@@ -4,7 +4,7 @@
     <script src="anijs-min.js"></script>
 ```
 
-#### 2. **Include an auxiliar stylesheet with the animations that you will need:**
+#### 2. **Include the stylesheet with the animations: **
 
 For example in our case:
 
@@ -16,7 +16,7 @@ For example in our case:
 ```html
     <p data-anijs="if: click, on:h1, do: pulse animated, to:h2"></p>
 ```
-Check the [example](http://codepen.io/darielnoel/pen/trnzk?editors=100)
+Also check the [example](http://codepen.io/darielnoel/pen/trnzk?editors=100)
 
 -----------------------
 
@@ -45,4 +45,7 @@ and finally copy the sentence into some html element like the next example.
     <p data-anijs="if: click, on:h1, do: pulse animated, to:h2"></p>
 ```
 
-That's all! but you can play with anijs sentence a lot of more, keep looking around this site, you'll find more details and more examples, more versatility for amaze, and a lot of fun in the meantime.
+That's all! 
+
+Nevertheless, you can play with anijs sentence a lot of more, keep looking around this site, you'll find more details, examples and versatility.
+You'll find a lot of fun!

@@ -15,8 +15,11 @@ It provides an easy and quick method for  prototyping and developing UI interfac
 - [[More helpers functions | Main-helpers]]
 - [[Refer to the current element]]
 
+##Chapter 2: AniJS Studio
+- Install
+- Use Case
 
-##Chapter2: Advanced AniJS
+##Chapter 3: Advanced AniJS
 
 - [[Registering new Helpers]]
 - [[Animation Context Instance | Animation Context Object]]
@@ -35,10 +38,11 @@ It provides an easy and quick method for  prototyping and developing UI interfac
 - [[Using AMD | Using-amd]]
 
 
-##Chapter3: Test
+##Chapter4: Test
 - [[Test Cases]]
 
-##Chapter3: Examples
+
+##Chapter5: Examples
 - [[Test Cases]]
 
 
