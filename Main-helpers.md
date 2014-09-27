@@ -3,6 +3,15 @@ More helpers functions:
 
 ##How use the main helpers?
 
+* _[remove](#remove)_
+* _[clone](#clone)_
+* _[parent](#parent)_
+* _[ancestors](#ancestors)_
+* _[closest](#closest)_
+* _[find](#find)_
+* _[children](#children)_
+* _[emit](#emit)_
+
 ###1. First, include ...
 
 ```xml
@@ -15,11 +24,11 @@ More helpers functions:
 
 ###2. Then inside the anijs sentence...
 
-* You can add the following functions to any of clauses 'do:', 'after:' or 'before:' behavior:
+* You can add the following functions to any of the clauses 'do:', 'after:' or 'before:' behavior:
 
-  - remove
+  - remove<a name="remove"></a>
 
-  _Remove element or elements from html. This function can take one or more parameters as follows param1 | param2 | paramN ..._
+  _Removes element or elements from html. This function can take one or more parameters separated by "|" as follows: param1 | param2 | paramN ..._
 
    * Examples: *
 
@@ -36,9 +45,9 @@ More helpers functions:
     <div data-anijs="if: click, do: $remove .remove | #remove | p"> </div>
 ```
 
-  - clone
+  - clone<a name="clone"></a>
 
-    _Clone element or elements from html. This function can take one or more parameters as follows param1 | param2 | paramN ..._
+    _Clones element or elements from html. This function can take one or more parameters separated by "|" as follows param1 | param2 | paramN ..._
 
     * Examples: *
 
@@ -53,11 +62,11 @@ More helpers functions:
      <div data-anijs="if: click, do: $clone #clone"> </div>
 ```
 
-* Selectors fuctions:
+* Selector fuctions
 
-  - parent
+  - parent<a name="parent"></a>
 
-    _Function that return element parent, this function can take until one param_
+    _Returns element's parent, this function takes one parameter at most_
 
     * Examples: *
 
@@ -70,9 +79,9 @@ More helpers functions:
     <div data-anijs="if: click, on: li, do: $remove, to: $parent .primary"> </div>
 ```
 
-  - ancestors
+  - ancestors<a name="ancestors"></a>
 
-    _Function that return element ancestors, this function can take until two params_
+    _Returns element's ancestors, this function takes at most two parameters_
 
     * Examples: *
 
@@ -87,9 +96,9 @@ More helpers functions:
     <div data-anijs="if: click, on: li, do: $remove, to: $ancestors .primary | .red-ancestors"> </div>
 ```
 
-  - closest
+  - closest<a name="closest"></a>
 
-    _Function that return the ancestor more closest optionally filtered by a selector, this function can take until two params_
+    _Returns the closest ancestor of the omitted or specified element, optionally filtered by a selector, this function takes at most two parameters_
 
     * Examples: *
 
@@ -102,9 +111,9 @@ More helpers functions:
       <div data-anijs="if: click, on: li, do: $remove, to: $closest .primary"> </div>
 ```
 
-  - find
+  - find<a name="find"></a>
 
-    _Function that return descendants elements each element in the current set of matched elements, optionally filtered by a selector, this function can take until two params_
+    _Returns descendants elements each element in the current set of matched elements, optionally filtered by a selector, this function takes at most two parameters_
 
     * Examples: *
 
@@ -117,9 +126,9 @@ More helpers functions:
       <div data-anijs="if: click, on: li, do: $remove, to: $find .primary"> </div>
 ```
 
-  - children
+  - children<a name="children"></a>
 
-    _Function that return the children that matched elements, optionally filtered by a selector, this function can take until two params_
+    _Function that return the children that matched elements, optionally filtered by a selector, this function takes at most two parameters_
 
     * Examples: *
 
@@ -132,7 +141,7 @@ More helpers functions:
       <div data-anijs="if: click, on: li, do: $remove, to: $children .primary"> </div>
 ```
 
-  - emit
+  - emit<a name="emit"></a>
 
     _Fire custom event_
 

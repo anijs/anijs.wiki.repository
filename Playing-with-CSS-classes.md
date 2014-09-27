@@ -23,12 +23,15 @@ You can use the reserved words:
 
 Like the next examples:
 
-- Simple Class
+- Single Class
 ```html
 <input data-anijs="if: click, on: .tab, do: $toggleClass active, to: .navbar">
 ```
 
-- Multiple Class
+Every time the user clicks on any htlm object with the "tab" class settled, the additional class "active" will be applied to the elements with the "navbar" class established. if the elements to modify, (in this case, the elements with the "navbar" class added) already has the "active" class settled, then the "active" class will be removed.
+
+
+- Multiple Classes
 ```html
 <div data-anijs="if: click, on: .tab, do: $addClass open primary-color, to: modal"></div>
 ```

@@ -16,7 +16,7 @@ For example in our case:
 ```html
     <p data-anijs="if: click, on:h1, do: pulse animated, to:h2"></p>
 ```
-Also check the [example](http://codepen.io/darielnoel/pen/trnzk?editors=100)
+Also check this [example](http://codepen.io/darielnoel/pen/trnzk?editors=100)
 
 -----------------------
 
@@ -39,7 +39,7 @@ You can try by completing with those previous elements the next fragment:
 
  **If:** <u>  *Event(click, scroll, mouseover and more)*  </u>, **On:** <u>  *Html element (css selector)*  </u>, **Do:** <u>  *Actions or Animations (Rotate animation)*  </u>, **To:** <u>  *Html element to modify*  </u>
 
-and finally copy the sentence into some html element like the next example.
+and finally copy the sentence into some html element like the next example:
 
 ```html
     <p data-anijs="if: click, on:h1, do: pulse animated, to:h2"></p>

@@ -3,7 +3,7 @@ The AniJS Language
 
 The basic anijs sentence its like this general form:
 
-**If** -  some event(click, scroll, [etc](https://developer.mozilla.org/en-US/docs/Web/Events)), **On** any element (css selector), **Do** -  some behavior(animation, $addClass, [etc](#)), **To**  - (any element).
+**If** <u> *some event(click, scroll, [etc](https://developer.mozilla.org/en-US/docs/Web/Events))* </u>, **On** <u> *any element (css selector)* </u>, **Do** <u> *some behavior(animation, $addClass, [etc](#))* </u>, **To**  <u> *(any element)* </u>.
 
 Example:
 
@@ -36,6 +36,4 @@ Examples:
 <input id="name" type="text" data-anijs="if: focus, do: wobble, to: p">
 ```
 
-> ***But*** we encourage you to take a closer look to it, clause by clause... maybe... you can find
-
-> there more sparkling details...
+> ***But*** we encourage you to take a closer look to it, clause by clause... maybe... you can find around here more sparkling details...
