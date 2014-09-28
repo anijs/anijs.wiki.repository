@@ -26,7 +26,7 @@ More helper functions
 
 ###2. Then inside the anijs sentence...
 
-* You can define when these behaviors will be execute by adding the following functions to any of the clauses _'do:'_, _'after:'_ or _'before:'_
+* ...You can add them into any of the clauses _'do:'_, _'after:'_ or _'before:'_
 
   - **remove<a name="remove"></a>**
 
@@ -58,10 +58,10 @@ More helper functions
     <u>Examples:</u>
 
 ```xml
-  <!-- Clones current HTML element and append it in the same parent. -->
+  <!-- Clones current HTML element and append it as child of the same element's parent. -->
      <div data-anijs="if: click, do: $clone"> </div>
     
-  <!-- Clones the HTML element with id "clone" and append it in the same parent. -->
+  <!-- Clones the HTML element with id "clone" and append it as child of the same element's parent. -->
      <div data-anijs="if: click, do: $clone #clone"> </div>
     
   <!-- Clones current HTML element and append it as child of the element with id "otherParent". -->
@@ -80,7 +80,7 @@ More helper functions
     <u>Examples:</u>
 
 ```xml
-  <!-- Removes the parent of the div tag which contains the present anijs sentence -->
+  <!-- Removes the parent of the 'actual' div tag -->
     <div data-anijs="if: click, on: li, do: $remove, to: $parent"> </div>
     
   <!-- Removes the parent of the li tag that fired the click event -->
@@ -97,16 +97,16 @@ More helper functions
     <u>Examples:</u>
 
 ```xml
-  <!-- Removes ancestors of the div tag which contains the present anijs sentence -->
+  <!-- Removes ancestors of the 'actual' div tag -->
     <div data-anijs="if: click, on: li, do: $remove, to: $ancestors"> </div>
     
-  <!-- Removes ancestors of the div tag which contains the present anijs sentence. 
-    Specifically ancestors with .red-ancestors class name  -->
+  <!-- Removes ancestors of the 'actual' div tag. Specifically the ancestors with class name: .red-ancestors  -->
     <div data-anijs="if: click, on: li, do: $remove, to: $ancestors .red-ancestors"> </div>
     
-  <!-- Removes ancestors with css class .red-ancestors of li that dispatch the event -->
+  <!-- Removes ancestors of the li tag which dispatch the event. Specifically ancestors with class name: .red-ancestors -->
     <div data-anijs="if: click, on: li, do: $remove, to: $ancestors target | .red-ancestors"> </div>
-  <!-- Removes ancestors with css class .red-ancestors of elements with css class primary -->
+    
+  <!-- Removes ancestors of those having class names: red-ancestors and primary  -->
     <div data-anijs="if: click, on: li, do: $remove, to: $ancestors .primary | .red-ancestors"> </div>
 ```
 
@@ -117,41 +117,47 @@ More helper functions
     <u>Examples:</u>
 
 ```xml
-  <!-- Removes ancestor more closets of div -->
+  <!-- Removes the closest ancestor of the 'actual' div tag. -->
       <div data-anijs="if: click, on: li, do: $remove, to: $closest"> </div>
-  <!-- Removes ancestor more closets of li -->
+      
+  <!-- Removes the ancestor more close to the li tag that fired the click event -->
       <div data-anijs="if: click, on: li, do: $remove, to: $closest target"> </div>
-  <!-- Removes ancestor more closets of div with css class .primary -->
+      
+  <!-- Removes 'actual' div tag closest ancestor having the class name: .primary -->
       <div data-anijs="if: click, on: li, do: $remove, to: $closest .primary"> </div>
 ```
 
   - **find<a name="find"></a>**
 
-    _Returns descendants elements each element in the current set of matched elements, optionally filtered by a selector, this function takes at most two parameters_
+    _Returns descendant elements, each element in the current set of matched elements optionally filtered by a selector, this function takes at most two parameters_
 
     <u>Examples:</u>
 
 ```xml
-  <!-- Removes all descendants elements of div -->
+  <!-- Removes all descendants elements of the 'actual' div tag. -->
       <div data-anijs="if: click, on: li, do: $remove, to: $find"> </div>
-  <!-- Removes all descendants elements of li -->
+      
+  <!-- Removes all descendants elements of the li tag that fired de click event. -->
       <div data-anijs="if: click, on: li, do: $remove, to: $find target"> </div>
-  <!-- Removes all descendants elements of div with css class is primary -->
+      
+  <!-- Removes descendants elements of div tag. Specifically those having class name primary -->
       <div data-anijs="if: click, on: li, do: $remove, to: $find .primary"> </div>
 ```
 
   - **children<a name="children"></a>**
 
-    _Function that return the children that matched elements, optionally filtered by a selector, this function takes at most two parameters_
+    _Returns the childrens, optionally filtered by a selector, this function takes at most two parameters_
 
     <u>Examples:</u>
 
 ```xml
-  <!-- Removes all children of div -->
+  <!-- Removes all children of the 'actual' div tag. -->
       <div data-anijs="if: click, on: li, do: $remove, to: $children"> </div>
-  <!-- Removes all children of li -->
+      
+  <!-- Removes all childrens of the li tag that fired the click event. -->
       <div data-anijs="if: click, on: li, do: $remove, to: $children target"> </div>
-  <!-- Removes all children of div with css class is primary -->
+      
+  <!-- Removes childrens of the 'actual' div tag. Specifically those having the class name: primary -->
       <div data-anijs="if: click, on: li, do: $remove, to: $children .primary"> </div>
 ```
 
@@ -159,10 +165,12 @@ More helper functions
 
     _Fire custom event_
 
-    <u>Examples:</u>
+    <u>Example:</u>
 
 ```xml
-  <!-- Fire dummyEvent event of customEventNotifier -->
+  <!-- Fire dummyEvent event of the customEventNotifier -->
     <div data-anijs="if: click, do: fadeIn animated, to: #container, after: emit customEventNotifier.dummyEvent"> </div>
+    <!-- Listen and act when the dummyEvent event of the customEventNotifier ocurres -->
     <div data-anijs="if: dummyEvent, on: $customEventNotifier, do: $addClass hidden,  to: $children #container | div"> </div>
 ```
+In order to emit a custom event, the only thing to do is select two names: *notifier name* and *event name*. Then, you will use those names as the above example, in two places: where you are going to fired the event, and in the place you are going to listen for the event occurrence.
