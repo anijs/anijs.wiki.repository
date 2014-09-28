@@ -1,7 +1,7 @@
 The current element
 ==========================
 
-####How refer of the current element?
+####How refer to the current element?
 
 Using the word: ***target*** like the next example:
 

@@ -10,7 +10,7 @@ The AnimationEnd and TransitionEnd events varies depending on the browser.
 | Webkit  | webkitAnimationEnd | webkitTransitionEnd  |  
 | Opera   | oanimationend      | otransitionEnd	 |  
 
-AniJS is ruled by the W3C standar (**animationend** and **transitionend**).
+AniJS is ruled by the W3C standard (**animationend** and **transitionend**).
 
 
 Animationend Event example: 

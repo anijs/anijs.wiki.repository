@@ -1,7 +1,7 @@
 Sentence Definitions
 ==========================
 
-For managging an animation correctly the following parameters must be stablished in some of the HTML elements.
+For managging an animation correctly the following parameters must be established in some of the HTML elements.
 
 ##### If
 
@@ -29,7 +29,7 @@ Example:
 
 ##### On
 
-Stablish the trigger animation elements that waits for the event defined in the [if]. If [On] is not specified the element that holds the declaration owns it. To get the elements a CSS selector is defined.
+Establish the trigger animation elements that waits for the event defined in the [if]. If [On] is not specified the element that holds the declaration owns it. To get the elements a CSS selector is defined.
 
 Specifying the trigger animation element example:
 

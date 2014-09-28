@@ -1,7 +1,7 @@
-Helpers functions
+Helper functions
 ====================
 
-### **How put or remove classes to the html elements?**
+### **How put or remove classes in the html elements?**
 
 **1- First, include ...**
 
@@ -17,9 +17,9 @@ Helpers functions
 
 You can use the reserved words:
 
- * $addClass
- * $removeClass
- * $toggleClass
+ * **$addClass**
+ * **$removeClass**
+ * **$toggleClass**
 
 Like the next examples:
 
@@ -28,12 +28,14 @@ Like the next examples:
 <input data-anijs="if: click, on: .tab, do: $toggleClass active, to: .navbar">
 ```
 
-Every time the user clicks on any htlm object with the "tab" class settled, the additional class "active" will be applied to the elements with the "navbar" class established. if the elements to modify, (in this case, the elements with the "navbar" class added) already has the "active" class settled, then the "active" class will be removed.
+Every time the user clicks on any htlm object with the "tab" class assigned, the additional **class** "active" will be **applied or removed** accordingly, in the elements with the "navbar" class established.
 
 
 - Multiple Classes
 ```html
 <div data-anijs="if: click, on: .tab, do: $addClass open primary-color, to: modal"></div>
 ```
+
+Every time the user clicks on any htlm object with the "tab" class assigned, the additional **classes** "open primary-color" will be **added**, to the elements with the "navbar" class established.
 
 - Check a real world example on [codepen](http://codepen.io/darielnoel/full/FvCbx/)

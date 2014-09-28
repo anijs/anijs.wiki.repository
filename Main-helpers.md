@@ -1,7 +1,7 @@
-More helpers functions:
+More helper functions
 ===================================
 
-##How use the main helpers?
+##Which other helpers you can use for modifying html elements?
 
 * _[remove](#remove)_
 * _[clone](#clone)_
@@ -11,6 +11,8 @@ More helpers functions:
 * _[find](#find)_
 * _[children](#children)_
 * _[emit](#emit)_
+
+##What they do and how use them?
 
 ###1. First, include ...
 
@@ -24,128 +26,140 @@ More helpers functions:
 
 ###2. Then inside the anijs sentence...
 
-* You can add the following functions to any of the clauses 'do:', 'after:' or 'before:' behavior:
+* You can define when these behaviors will be execute by adding the following functions to any of the clauses _'do:'_, _'after:'_ or _'before:'_
 
-  - remove<a name="remove"></a>
+  - **remove<a name="remove"></a>**
 
-  _Removes element or elements from html. This function can take one or more parameters separated by "|" as follows: param1 | param2 | paramN ..._
+  _Removes an element or elements from html page. This function can take one or more parameters separated by "|" as follows: param1 | param2 | paramN ..._
 
-   * Examples: *
+   <u>Examples:</u>
 
 ```xml
-  <!-- Remove current element.-->
+  <!-- Removes current element.-->
     <div data-anijs="if: click, do: $remove"> </div>
-  <!-- Remove HTML elements with class name .remove -->
+    
+  <!-- Removes HTML elements having the class name .remove -->
     <div data-anijs="if: click, do: $remove .remove"> </div>
-  <!-- Remove HTML element with id remove -->
+    
+  <!-- Removes HTML element with remove id-->
     <div data-anijs="if: click, do: $remove #remove"> </div>
-  <!-- Remove HTML elements with tag name p -->
+    
+  <!-- Removes HTML elements with tag name p -->
     <div data-anijs="if: click, do: $remove p"> </div>
-  <!-- Remove all HTML elements that contain class name remove or id remove o tag name p -->
+    
+  <!-- Removes all HTML elements with the class name remove, or the remove id, or the tag name p -->
     <div data-anijs="if: click, do: $remove .remove | #remove | p"> </div>
 ```
 
-  - clone<a name="clone"></a>
+  - **clone<a name="clone"></a>**
 
-    _Clones element or elements from html. This function can take one or more parameters separated by "|" as follows param1 | param2 | paramN ..._
+    _Duplicates html elements. This function can take one or more parameters separated by "|" as follows: param1 | param2 | paramN ..._
 
-    * Examples: *
+    <u>Examples:</u>
 
 ```xml
-  <!-- Clone current HTML element and append in same parent. -->
-    <div data-anijs="if: click, do: $clone"> </div>
-  <!-- Clone current HTML element and append other parent. -->
-     <div data-anijs="if: click, do: $clone, to: #otherParent"> </div>
-  <!-- Clone HTML element and append other parent. -->
-     <div data-anijs="if: click, do: $clone #clone, to: #otherParent"> </div>
-  <!-- Clone HTML element and append in same parent. -->
+  <!-- Clones current HTML element and append it in the same parent. -->
+     <div data-anijs="if: click, do: $clone"> </div>
+    
+  <!-- Clones the HTML element with id "clone" and append it in the same parent. -->
      <div data-anijs="if: click, do: $clone #clone"> </div>
+    
+  <!-- Clones current HTML element and append it as child of the element with id "otherParent". -->
+     <div data-anijs="if: click, do: $clone, to: #otherParent"> </div>
+     
+  <!-- Clones the HTML element with the id "clone" and append it as child of the element with id "otherParent". -->
+     <div data-anijs="if: click, do: $clone #clone, to: #otherParent"> </div>
 ```
 
 * Selector fuctions
 
-  - parent<a name="parent"></a>
+  - **parent<a name="parent"></a>**
 
     _Returns element's parent, this function takes one parameter at most_
 
-    * Examples: *
+    <u>Examples:</u>
 
 ```xml
-  <!-- The div parent is removed -->
+  <!-- Removes the parent of the div tag which contains the present anijs sentence -->
     <div data-anijs="if: click, on: li, do: $remove, to: $parent"> </div>
-  <!-- The parent of li that fire event is removed -->
+    
+  <!-- Removes the parent of the li tag that fired the click event -->
     <div data-anijs="if: click, on: li, do: $remove, to: $parent target"> </div>
-  <!-- Remove all parents of elements that css class is .primary -->
+    
+  <!-- Removes all parents of the elements which have .primary class name -->
     <div data-anijs="if: click, on: li, do: $remove, to: $parent .primary"> </div>
 ```
 
-  - ancestors<a name="ancestors"></a>
+  - **ancestors<a name="ancestors"></a>**
 
     _Returns element's ancestors, this function takes at most two parameters_
 
-    * Examples: *
+    <u>Examples:</u>
 
 ```xml
-  <!-- The div ancestors are removed -->
+  <!-- Removes ancestors of the div tag which contains the present anijs sentence -->
     <div data-anijs="if: click, on: li, do: $remove, to: $ancestors"> </div>
-  <!-- Remove ancestors of div with css class .red-ancestors -->
+    
+  <!-- Removes ancestors of the div tag which contains the present anijs sentence. 
+    Specifically ancestors with .red-ancestors class name  -->
     <div data-anijs="if: click, on: li, do: $remove, to: $ancestors .red-ancestors"> </div>
-  <!-- Remove ancestors with css class .red-ancestors of li that dispatch the event -->
+    
+  <!-- Removes ancestors with css class .red-ancestors of li that dispatch the event -->
     <div data-anijs="if: click, on: li, do: $remove, to: $ancestors target | .red-ancestors"> </div>
-  <!-- Remove ancestors with css class .red-ancestors of elements with css class primary -->
+  <!-- Removes ancestors with css class .red-ancestors of elements with css class primary -->
     <div data-anijs="if: click, on: li, do: $remove, to: $ancestors .primary | .red-ancestors"> </div>
 ```
 
-  - closest<a name="closest"></a>
+  - **closest<a name="closest"></a>**
 
     _Returns the closest ancestor of the omitted or specified element, optionally filtered by a selector, this function takes at most two parameters_
 
-    * Examples: *
+    <u>Examples:</u>
 
 ```xml
-  <!-- Remove ancestor more closets of div -->
+  <!-- Removes ancestor more closets of div -->
       <div data-anijs="if: click, on: li, do: $remove, to: $closest"> </div>
-  <!-- Remove ancestor more closets of li -->
+  <!-- Removes ancestor more closets of li -->
       <div data-anijs="if: click, on: li, do: $remove, to: $closest target"> </div>
-  <!-- Remove ancestor more closets of div with css class .primary -->
+  <!-- Removes ancestor more closets of div with css class .primary -->
       <div data-anijs="if: click, on: li, do: $remove, to: $closest .primary"> </div>
 ```
 
-  - find<a name="find"></a>
+  - **find<a name="find"></a>**
 
     _Returns descendants elements each element in the current set of matched elements, optionally filtered by a selector, this function takes at most two parameters_
 
-    * Examples: *
+    <u>Examples:</u>
 
 ```xml
-  <!-- Remove all descendants elements of div -->
+  <!-- Removes all descendants elements of div -->
       <div data-anijs="if: click, on: li, do: $remove, to: $find"> </div>
-  <!-- Remove all descendants elements of li -->
+  <!-- Removes all descendants elements of li -->
       <div data-anijs="if: click, on: li, do: $remove, to: $find target"> </div>
-  <!-- Remove all descendants elements of div with css class is primary -->
+  <!-- Removes all descendants elements of div with css class is primary -->
       <div data-anijs="if: click, on: li, do: $remove, to: $find .primary"> </div>
 ```
 
-  - children<a name="children"></a>
+  - **children<a name="children"></a>**
 
     _Function that return the children that matched elements, optionally filtered by a selector, this function takes at most two parameters_
 
-    * Examples: *
+    <u>Examples:</u>
 
 ```xml
-  <!-- Remove all children of div -->
+  <!-- Removes all children of div -->
       <div data-anijs="if: click, on: li, do: $remove, to: $children"> </div>
-  <!-- Remove all children of li -->
+  <!-- Removes all children of li -->
       <div data-anijs="if: click, on: li, do: $remove, to: $children target"> </div>
-  <!-- Remove all children of div with css class is primary -->
+  <!-- Removes all children of div with css class is primary -->
       <div data-anijs="if: click, on: li, do: $remove, to: $children .primary"> </div>
 ```
 
-  - emit<a name="emit"></a>
+  - **emit<a name="emit"></a>**
 
     _Fire custom event_
 
-    * Examples: *
+    <u>Examples:</u>
 
 ```xml
   <!-- Fire dummyEvent event of customEventNotifier -->
