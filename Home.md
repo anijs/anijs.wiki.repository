@@ -13,9 +13,11 @@ It provides an easy and quick method for prototyping and developing UI interface
 - [[The AniJS Sentence | The-language]]
 - [[Sentence Definitions]]
 - [[AnimationEnd and TransitionEnd normalization]]
-- [[Helper functions for playing with CSS classes | Playing-with-CSS-classes]]
-- [[**Helper functions for playing with full html elements**| Main-helpers]]
-- [[Refer to the current element]]
+- [[Playing with CSS classes with helper functions | Playing-with-CSS-classes]]
+- [[Playing with full html elements with **helper functions** | Main-helpers]]
+- [[Selecting html elements with helper functions | Selecting-html-elements]]
+- [[Referring to the current element | Refer-to-the-current-element]]
+- [[Emitting your own events is easy | emit ]]
 
 
 ###Advanced AniJS
