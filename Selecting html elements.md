@@ -25,9 +25,10 @@ Helper functions for selecting
 
 ##### parent #####
 
-    _Returns element's parent, this function takes one parameter at most_
+_Returns element's parent, this function takes one parameter at most_
 
-    <u>Examples:</u>
+<u>Examples:</u>
+
 
 ```xml
   <!-- Removes the parent of the 'actual' div tag -->
@@ -40,11 +41,13 @@ Helper functions for selecting
     <div data-anijs="if: click, on: li, do: $remove, to: $parent .primary"> </div>
 ```
 
+
 ##### ancestors #####
 
-    _Returns element's ancestors, this function takes at most two parameters_
+_Returns element's ancestors, this function takes at most two parameters_
 
-    <u>Examples:</u>
+<u>Examples:</u>
+
 
 ```xml
   <!-- Removes ancestors of the 'actual' div tag -->
@@ -60,11 +63,13 @@ Helper functions for selecting
     <div data-anijs="if: click, on: li, do: $remove, to: $ancestors .primary | .red-ancestors"> </div>
 ```
 
+
 ##### closest #####
 
-    _Returns the closest ancestor of the omitted or specified element, optionally filtered by a selector, this function takes at most two parameters_
+_Returns the closest ancestor of the omitted or specified element, optionally filtered by a selector, this function takes at most two parameters_
 
-    <u>Examples:</u>
+<u>Examples:</u>
+
 
 ```xml
   <!-- Removes the closest ancestor of the 'actual' div tag. -->
@@ -79,9 +84,9 @@ Helper functions for selecting
 
 ##### find #####
 
-    _Returns descendant elements, each element in the current set of matched elements optionally filtered by a selector, this function takes at most two parameters_
+_Returns descendant elements, each element in the current set of matched elements optionally filtered by a selector, this function takes at most two parameters_
 
-    <u>Examples:</u>
+<u>Examples:</u>
 
 ```xml
   <!-- Removes all descendants elements of the 'actual' div tag. -->
@@ -96,9 +101,10 @@ Helper functions for selecting
 
 ##### children #####
 
-    _Returns the childrens, optionally filtered by a selector, this function takes at most two parameters_
+_Returns the childrens, optionally filtered by a selector, this function takes at most two parameters_
 
-    <u>Examples:</u>
+<u>Examples:</u>
+
 
 ```xml
   <!-- Removes all children of the 'actual' div tag. -->
@@ -110,3 +116,4 @@ Helper functions for selecting
   <!-- Removes childrens of the 'actual' div tag. Specifically those having the class name: primary -->
       <div data-anijs="if: click, on: li, do: $remove, to: $children .primary"> </div>
 ```
+
