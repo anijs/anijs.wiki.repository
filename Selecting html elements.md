@@ -23,7 +23,7 @@ Helper functions for selecting
 
 ###2. Then inside the anijs sentence...
 
-  ##### parent #####
+##### parent #####
 
     _Returns element's parent, this function takes one parameter at most_
 
@@ -40,7 +40,7 @@ Helper functions for selecting
     <div data-anijs="if: click, on: li, do: $remove, to: $parent .primary"> </div>
 ```
 
-  - **ancestors<a name="ancestors"></a>**
+##### ancestors #####
 
     _Returns element's ancestors, this function takes at most two parameters_
 
@@ -60,7 +60,7 @@ Helper functions for selecting
     <div data-anijs="if: click, on: li, do: $remove, to: $ancestors .primary | .red-ancestors"> </div>
 ```
 
-  #####closest#####
+##### closest #####
 
     _Returns the closest ancestor of the omitted or specified element, optionally filtered by a selector, this function takes at most two parameters_
 
@@ -77,7 +77,7 @@ Helper functions for selecting
       <div data-anijs="if: click, on: li, do: $remove, to: $closest .primary"> </div>
 ```
 
-  #####find#####
+##### find #####
 
     _Returns descendant elements, each element in the current set of matched elements optionally filtered by a selector, this function takes at most two parameters_
 
@@ -94,7 +94,7 @@ Helper functions for selecting
       <div data-anijs="if: click, on: li, do: $remove, to: $find .primary"> </div>
 ```
 
-  #####children#####
+##### children #####
 
     _Returns the childrens, optionally filtered by a selector, this function takes at most two parameters_
 
