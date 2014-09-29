@@ -1,7 +1,7 @@
 Helper functions for selecting
 ===================================
 
-##Which helpers you can use auxiliary for selecting html elements?
+##Which helpers you can use for selecting html elements?
 
 * _[parent](#parent)_
 * _[ancestors](#ancestors)_
@@ -11,13 +11,15 @@ Helper functions for selecting
 
 ##How use them?
 
+_You can use them as part of the AniJS sentence, inside the "**to:** " definition. They can receive as parameter a CSS Selector or the word [[target | Refer-to-the-current-element]]. Here you can find several examples for each case._
+
 ###1. First, include ...
 
 ```xml
   <!--The core library-->
   <script src="anijs-min.js"></script>
 
-  <!-- Main helpers library -->
+  <!-- Helpers library -->
   <script src="anijs-helper-dom-min.js"></script>
 ```
 
@@ -25,7 +27,7 @@ Helper functions for selecting
 
 ##### parent #####
 
-_Returns element's parent, this function takes one parameter at most_
+_Returns an element's parent. This function takes one parameter at most. As parameter you can use a CSS Selector or the word [[target | Refer-to-the-current-element]]._
 
 <u>Examples:</u>
 
@@ -44,7 +46,7 @@ _Returns element's parent, this function takes one parameter at most_
 
 ##### ancestors #####
 
-_Returns element's ancestors, this function takes at most two parameters_
+_Returns element's ancestors of the omitted or specified element, optionally filtered by a selector. This function takes at most two parameters._
 
 <u>Examples:</u>
 
@@ -84,7 +86,7 @@ _Returns the closest ancestor of the omitted or specified element, optionally fi
 
 ##### find #####
 
-_Returns descendant elements, each element in the current set of matched elements optionally filtered by a selector, this function takes at most two parameters_
+_Returns descendant elements, of the omitted or specified element, optionally filtered by a selector, this function takes at most two parameters_
 
 <u>Examples:</u>
 
@@ -101,7 +103,7 @@ _Returns descendant elements, each element in the current set of matched element
 
 ##### children #####
 
-_Returns the childrens, optionally filtered by a selector, this function takes at most two parameters_
+_Returns the childrens, of the omitted or specified element, optionally filtered by a selector, this function takes at most two parameters_
 
 <u>Examples:</u>
 

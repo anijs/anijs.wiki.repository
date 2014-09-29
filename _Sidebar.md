@@ -4,9 +4,9 @@
 - [[The AniJS Language | The-language]]
 - [[Sentence Definitions]]
 - [[AnimationEnd and TransitionEnd normalization]]
-- [[Playing with CSS classes with helper functions | Playing-with-CSS-classes]]
-- [[Playing with full html elements with **helper functions** | Main-helpers]]
-- [[Selecting html elements with helper functions | Selecting-html-elements]]
+- [[Playing with CSS classes | Playing-with-CSS-classes]]
+- [[Clone and remove html elements | Clone-and-remove]]
+- [[Selecting html elements | Selecting-html-elements]]
 - [[Referring to the current element | Refer-to-the-current-element]]
 - [[Emitting your own events is easy | emit ]]
 

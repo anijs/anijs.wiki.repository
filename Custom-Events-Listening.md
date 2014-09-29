@@ -36,7 +36,7 @@ Example:
 #####Getting the EventProvider Object
 
 
-After AniJS has ran, you can obtain an specific EventProvider through the **getEventProvider** method, that use the EventProvider ID as a parameter(the same that was stablished on the definition).
+After AniJS has ran, you can obtain an specific EventProvider through the **getEventProvider** method, that use the EventProvider ID as a parameter(the same that was established on the definition).
 
 
 Example: 

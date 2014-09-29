@@ -11,9 +11,11 @@ It provides an easy and quick method for  prototyping and developing UI interfac
 - [[The AniJS Language | The-language]]
 - [[Sentence Definitions]]
 - [[AnimationEnd and TransitionEnd normalization]]
-- [[Helpers functions | Playing-with-CSS-classes]]
-- [[More helpers functions | Main-helpers]]
-- [[Refer to the current element]]
+- [[Playing with CSS classes | Playing-with-CSS-classes]]
+- [[Clone and remove html elements | Clone-and-remove]]
+- [[Selecting html elements | Selecting-html-elements]]
+- [[Referring to the current element | Refer-to-the-current-element]]
+- [[Emitting your own events is easy | emit ]]
 
 ##Chapter 2: AniJS Studio
 - Install

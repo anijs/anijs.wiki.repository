@@ -1,13 +1,11 @@
 More helper functions
 ===================================
 
-##Which other helpers you can use for modifying html elements?
+##How remove and clone html elements?
 
 * _[remove](#remove)_
 * _[clone](#clone)_
 
-
-##What they do and how use them?
 
 ###1. First, include ...
 
@@ -15,13 +13,13 @@ More helper functions
   <!--The core library-->
   <script src="anijs-min.js"></script>
 
-  <!-- Main helpers library -->
+  <!-- Helpers library -->
   <script src="anijs-helper-dom-min.js"></script>
 ```
 
 ###2. Then inside the anijs sentence...
 
-* ...You can add them into any of the clauses _'do:'_, _'after:'_ or _'before:'_
+* ...You can add the words remove or clone into any of the _'do:'_, _'after:'_ or _'before:'_ definitions.
 
 ##### remove #####
 
@@ -65,3 +63,4 @@ More helper functions
   <!-- Clones the HTML element with the id "clone" and append it as child of the element with id "otherParent". -->
      <div data-anijs="if: click, do: $clone #clone, to: #otherParent"> </div>
 ```
+

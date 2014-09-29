@@ -1,7 +1,7 @@
 Emitting your own events
 ===================================
 
- - **emit<a name="emit"></a>**
+ - **emit**
 
     _Fire custom event_
 
@@ -15,12 +15,9 @@ Emitting your own events
 ```
 In order to emit a custom event, the only thing to do is select two names: *notifier name* and *event name*. Then, you will use those names as the above example, in two places: where you are going to fired the event, and in the place you are going to listen for the event occurrence.
 
-    <u>Remember the files to include...</u>
+    <u>Remember include AniJS library...</u>
     
 ```xml
    <!--The core library-->
     <script src="anijs-min.js"></script>
-
-   <!-- Main helpers library -->
-    <script src="anijs-helper-dom-min.js"></script>
 ```
