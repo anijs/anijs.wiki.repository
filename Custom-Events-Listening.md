@@ -2,19 +2,19 @@ Custom Events Listening
 ============================================
 
 
-AniJS allows to execute the animations using customized events as a trigger. You can create your own events and attach the animations to them.
+AniJS allows to execute the actions in "**do**" definition, using customized events as a trigger. You can create your own events and attach the actions to them.
 
-You can see a [Codepen Example](http://codepen.io/darielnoel/pen/KzsFn?editors=001) you must read bellow first.
+You can see a [Codepen Example](http://codepen.io/darielnoel/pen/KzsFn?editors=001) but you must read bellow first.
 
 #####Advantages
 
 - Cross-browser events.
 - Integrate touch gestures.
-- More Looseling Coupeling.
+- Loose Coupling.
 
 **EventProvider**
 
-An EventProvider is an interface that allows AniJS to listen complex events. From now on you can run animations when a complex event is triggered. 
+An EventProvider is an interface that allows AniJS to listen complex events. From now on you can run the actions or animations when a complex event is triggered. 
 
 We strongly believe that interesting things can be achieved using this philosophy. Be creative!.
 
@@ -25,12 +25,21 @@ You can declare an EventProvider using **$** chart at the begining of the **on**
 
 The event type must be specified on the **if** definition.
 
-Example: 
+Examples
+
+- Running an animation when the customized event is triggered.
 
 ```xml
 <header data-anijs="if: Double-tap, on: $GestureEventProvider, do: wobble animated">
 <!-- ... -->
 </header>
+```
+
+- Executing a clone action when the customized event is triggered.
+
+```xml
+  <!-- Clones current HTML element and append it as child of the same element's parent when "Double-tap" events is fired -->
+     <div data-anijs="if: Double-tap, on: $GestureEventProvider, do: $clone"> If you "Double-tap" here, this sentence will be cloned. </div>
 ```
 
 #####Getting the EventProvider Object
