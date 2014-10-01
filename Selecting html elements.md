@@ -33,7 +33,8 @@ _Returns an element's parent. This function takes one parameter at most. As para
 
 
 ```xml
-  <!-- Removes the parent of the 'actual' div tag when the user clicks on the element with id: eraseButton -->
+  <!-- Removes the parent of the 'actual' div tag 
+       when the user clicks on the element with id: eraseButton -->
     <div data-anijs="if: click, on: #eraseButton, do: $remove, to: $parent"> </div>
     
   <!-- Animate the parent of the li tag that fired the click event -->
@@ -52,7 +53,8 @@ _Returns element's ancestors of the omitted or specified element, optionally fil
 
 
 ```xml
-  <!-- Running swing animation over the ancestors of the 'actual' div tag when the user clicks on any li tag -->
+  <!-- Running swing animation over the ancestors of the 'actual' div tag 
+        when the user clicks on any li tag -->
     <div data-anijs="if: click, on: li, do: swing animated, to: $ancestors"> </div>
     
   <!-- Adding css class .big to all ancestors of the elements with class name: .red-ancestors  -->
