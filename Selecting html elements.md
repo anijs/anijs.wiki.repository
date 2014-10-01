@@ -33,14 +33,14 @@ _Returns an element's parent. This function takes one parameter at most. As para
 
 
 ```xml
-  <!-- Removes the parent of the 'actual' div tag -->
-    <div data-anijs="if: click, on: li, do: $remove, to: $parent"> </div>
+  <!-- Removes the parent of the 'actual' div tag when the user clicks on the element with id: eraseButton -->
+    <div data-anijs="if: click, on: #eraseButton, do: $remove, to: $parent"> </div>
     
-  <!-- Removes the parent of the li tag that fired the click event -->
-    <div data-anijs="if: click, on: li, do: $remove, to: $parent target"> </div>
+  <!-- Animate the parent of the li tag that fired the click event -->
+    <div data-anijs="if: click, on: li, do: flash animated, to: $parent target"> </div>
     
-  <!-- Removes all parents of the elements which have .primary class name -->
-    <div data-anijs="if: click, on: li, do: $remove, to: $parent .primary"> </div>
+  <!-- Clones the parent of all elements which have .primary class name -->
+    <div data-anijs="if: click, on: .tab, do: $clone, to: $parent .primary"> </div>
 ```
 
 
@@ -52,13 +52,14 @@ _Returns element's ancestors of the omitted or specified element, optionally fil
 
 
 ```xml
-  <!-- Removes ancestors of the 'actual' div tag -->
-    <div data-anijs="if: click, on: li, do: $remove, to: $ancestors"> </div>
+  <!-- Running swing animation over the ancestors of the 'actual' div tag when the user clicks on any li tag -->
+    <div data-anijs="if: click, on: li, do: swing animated, to: $ancestors"> </div>
     
-  <!-- Removes ancestors of the 'actual' div tag. Specifically the ancestors with class name: .red-ancestors  -->
-    <div data-anijs="if: click, on: li, do: $remove, to: $ancestors .red-ancestors"> </div>
+  <!-- Adding css class .big to all ancestors of the elements with class name: .red-ancestors  -->
+    <div data-anijs="if: click, on: #wave, do: $addClass .big, to: $ancestors .red-ancestors"> </div>
     
-  <!-- Removes ancestors of the li tag which dispatch the event. Specifically ancestors with class name: .red-ancestors -->
+  <!-- Removes ancestors of the li tag which dispatch the event. 
+        Specifically ancestors with class name: .red-ancestors -->
     <div data-anijs="if: click, on: li, do: $remove, to: $ancestors target | .red-ancestors"> </div>
     
   <!-- Removes ancestors of those having class names: red-ancestors and primary  -->
@@ -74,8 +75,9 @@ _Returns the closest ancestor of the omitted or specified element, optionally fi
 
 
 ```xml
-  <!-- Removes the closest ancestor of the 'actual' div tag. -->
-      <div data-anijs="if: click, on: li, do: $remove, to: $closest"> </div>
+  <!-- Clones the 'actual' div tag and moves the cloned element 
+        as child of the closest ancestor from the 'actual' div tag -->
+      <div data-anijs="if: click, on: li, do: $clone, to: $closest"> </div>
       
   <!-- Removes the ancestor more close to the li tag that fired the click event -->
       <div data-anijs="if: click, on: li, do: $remove, to: $closest target"> </div>
