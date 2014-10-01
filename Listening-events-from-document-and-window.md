@@ -1,7 +1,7 @@
 Listening events from document and window
 =========================================
 
-If you want to execute an animation when any **document** event is triggered, such as DOMContentLoaded you just need to put the **on** definition the reserved word "document". 
+If you want to execute some action, for example, an animation, when any **document** event is triggered such as DOMContentLoaded you just need to put in the **on** definition the reserved word "document".
 
 Example: 
 
@@ -12,7 +12,7 @@ Example:
 </header>
 ```
 
-If you want to execute an animation when any **window** event is triggered, such as "scroll" you just need to put the **on** definition the reserved word "window". 
+If you want to execute some action, for example, an animation, when any **window** event is triggered, such as "scroll" you just need to put the **on** definition the reserved word "window". 
 
 Example: 
 
@@ -26,7 +26,7 @@ Example:
 
 Added since v0.5.0 version.
 
-Note that the **load** or **DOMContentLoaded**, events are executed before AniJS run. If you want to run an animation loaded immediately after the page you should use the default event **onRunFinished**.
+Note that the **load** or **DOMContentLoaded**, events are executed before AniJS run. If you want to execute an action or run an animation loaded immediately after the page you should use the default event **onRunFinished**.
 
 Example: 
 

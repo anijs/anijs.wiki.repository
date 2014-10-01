@@ -1,7 +1,7 @@
 Registering new Helpers
 ==========================
 
-A helper is a static class that contains the functions that can be invoked through the **before** and **after** definition.
+A helper is a static class which contains the functions that can be invoked through the **before** and **after** definitions.
 
 AniJS includes a helper by default with some useful functions, such as [[Remove animation after function]]. The implementation code looks like this:
 
