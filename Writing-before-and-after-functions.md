@@ -1,11 +1,11 @@
 Writing before and after functions
 ==================================
 
-The **before** and **after** definitions are useful when you want to execute actions before or after the animation is executed.  
+The **before** and **after** definitions are useful when you want to execute actions before or after the action specified in **do** ends.  
 
-These functions may be initiliazed by passing to them two params although they can be void.
+These functions may be initialized by passing two params to them, although it is no mandatory and could be no parameters at all.
 
-- **e** The [event object](https://developer.mozilla.org/en-US/docs/Web/API/Event) that triggers the animation.
+- **e** The [event object](https://developer.mozilla.org/en-US/docs/Web/API/Event) that triggers the action or animation.
 
 - **animationContext** The [[Animation Context Instance | Animation Context Object]].
 
@@ -35,7 +35,7 @@ animationHelper.beforeAnimationFunctionName = function(e, animationContext){
 }
 ```
 
-After the Before and After are defined, they have to be registered in a helper. AniJS has default empty helper called Default. You can access to it calling the **getHelper** function with no parameters.
+The **Before** and **After** function's definition have to be registered in a helper. AniJS has default empty helper called Default. You can access to it calling the **getHelper** function with no parameters.
 
 ```javascript
 //Obtaining the default helper

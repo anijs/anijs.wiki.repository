@@ -30,7 +30,7 @@ Some of the events are shown below as guide examples: click, focus, scroll, DOMC
 
 You may use it to specify the owner of the event. The anijs sentence will be used it only if the previous event occurs over the element specify here, with a CSS selector.
 
-If **[ On ]** is not specified, the element that holds the declaration owns it.
+If **[On]** is not specified, the element that holds the declaration owns it.
 
 **Examples**
 
@@ -92,7 +92,7 @@ Just a couple of examples as warming up:
 
 It defines the elements affected by the response action or animation. For naming those element you can use a **CSS Selector**, [[a AniJS' Selector|Selecting-html-elements]], or the word [[target|Refer-to-the-current-element]].
 
-If **[ To ]** is not specified the element that holds the declaration owns it.
+If **[To]** is not specified the element that holds the declaration owns it.
 
 Example:
 

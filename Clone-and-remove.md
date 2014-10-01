@@ -24,6 +24,7 @@ More helper functions
 ##### remove #####
 
   _Removes an element or elements from html page. This function can take one or more parameters separated by "|" as follows: param1 | param2 | paramN ..._
+  _Each parameters is a CSS Selector_
 
    <u>Examples:</u>
 
@@ -46,7 +47,9 @@ More helper functions
 
 ##### clone #####
 
-    _Duplicates html elements. This function can take one or more parameters separated by "|" as follows: param1 | param2 | paramN ..._
+_Replicates html elements. This function can take two parameters at most, separated by "|" as follows: param1 | param2_
+_The first parameter is a CSS selector indicating which elements are going to be cloned._
+_The second parameter is the number of times for cloning the element_
 
     <u>Examples:</u>
 
@@ -54,13 +57,16 @@ More helper functions
   <!-- Clones current HTML element and append it as child of the same element's parent. -->
      <div data-anijs="if: click, do: $clone"> </div>
     
-  <!-- Clones the HTML element with id "clone" and append it as child of the same element's parent. -->
-     <div data-anijs="if: click, do: $clone #clone"> </div>
+  <!-- Clones three times, the HTML element with id "clone" 
+    and append it as child of the same element's parent. -->
+     <div data-anijs="if: click, do: $clone #clone | 3"> </div>
     
-  <!-- Clones current HTML element and append it as child of the element with id "otherParent". -->
+  <!-- Clones current HTML element 
+    and append it as child of the element with id "otherParent". -->
      <div data-anijs="if: click, do: $clone, to: #otherParent"> </div>
      
-  <!-- Clones the HTML element with the id "clone" and append it as child of the element with id "otherParent". -->
+  <!-- Clones the HTML element with the id "clone" 
+    and append it as child of the element with id "otherParent". -->
      <div data-anijs="if: click, do: $clone #clone, to: #otherParent"> </div>
 ```
 
