@@ -1,9 +1,8 @@
 ###Basic Topics
 
 - [[Get started | How-use-it?]]
-- [[The AniJS Language | The-language]]
-- [[Sentence Definitions]]
-- [[AnimationEnd and TransitionEnd normalization]]
+- [[The AniJS Sentence | The-language]]
+- [[Sentence and Definitions | Sentence-Definitions]]
 - [[Playing with CSS classes | Playing-with-CSS-classes]]
 - [[Clone and remove html elements | Clone-and-remove]]
 - [[Selecting html elements | Selecting-html-elements]]
@@ -11,8 +10,9 @@
 - [[Emitting your own events is easy | emit ]]
 
 
-###Advanced Topics
+###Advanced AniJS
 
+- [[AnimationEnd and TransitionEnd normalization]]
 - [[Registering new Helpers]]
 - [[Animation Context Instance | Animation Context Object]]
 - [[Writing before and after functions]]

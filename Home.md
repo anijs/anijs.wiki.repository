@@ -11,8 +11,7 @@ It provides an easy and quick method for prototyping and developing UI interface
 
 - [[Get started | How-use-it?]]
 - [[The AniJS Sentence | The-language]]
-- [[Sentence Definitions]]
-- [[AnimationEnd and TransitionEnd normalization]]
+- [[Sentence and Definitions | Sentence-Definitions]]
 - [[Playing with CSS classes | Playing-with-CSS-classes]]
 - [[Clone and remove html elements | Clone-and-remove]]
 - [[Selecting html elements | Selecting-html-elements]]
@@ -22,6 +21,7 @@ It provides an easy and quick method for prototyping and developing UI interface
 
 ###Advanced AniJS
 
+- [[AnimationEnd and TransitionEnd normalization]]
 - [[Registering new Helpers]]
 - [[Animation Context Instance | Animation Context Object]]
 - [[Writing before and after functions]]

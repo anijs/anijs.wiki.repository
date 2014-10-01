@@ -3,15 +3,17 @@ The AniJS Language
 
 The basic anijs sentence its like this general form:
 
-**If** <u> *some event(click, scroll, [etc](https://developer.mozilla.org/en-US/docs/Web/Events))* </u>, **On** <u> *any element (css selector)* </u>, **Do** <u> *some behavior(animation, $addClass, [etc](#))* </u>, **To**  <u> *(any element)* </u>.
+**If** <u> *some event(click, scroll, [etc](https://developer.mozilla.org/en-US/docs/Web/Events))* </u>, **On** <u> *any element (css selector)* </u>, **Do** <u> *some behavior(animation, $addClass, $remove, [etc](#))* </u>, **To**  <u> *(any element)* </u>.
 
 Example:
 
 ```xml
-<div data-anijs="if: click, do: $toggleClass red, to: .box"></div>
+<div data-anijs="if: click, do: $toggleClass red, to: .box">If you click me, </div>
 ```
 
-###The formal language definition
+Every time the user clicks on the element with this sentence written, the red color will be switched in the elements with the "box" class established.
+
+###Formal language definition
 
 ```
 data-anijs  -> Sentence 1; ... ; Sentence n
